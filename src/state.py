@@ -16,7 +16,8 @@ ROOT = Path(__file__).resolve().parent.parent
 
 
 def _path(cfg: dict[str, Any]) -> Path:
-    p = ROOT / cfg["logging"]["dir"] / "state.json"
+    # Explicit per-config path: demo and live must never share a state file.
+    p = ROOT / cfg["logging"].get("state", f'{cfg["logging"]["dir"]}/state.json')
     p.parent.mkdir(parents=True, exist_ok=True)
     return p
 

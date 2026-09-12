@@ -91,15 +91,15 @@ def main() -> None:
     body = "\n".join([
         "# EMANET — performans metrikleri",
         "",
-        f"Üretildi: {datetime.now().strftime('%d.%m.%Y %H:%M')} · `python src/metrics.py` · elle yazılmış sayı yok.",
+        f"Üretildi: {datetime.now().strftime('%d.%m.%Y %H:%M')} · `python src/metrics.py` · tablolar defterden üretilir.",
         "",
         "> Hesap getirisi bu yarışmada puanlanmıyor ve burada iddia edilmiyor. Ölçülen şey ajanın",
         "> **karar kalitesi ve hesap verebilirliği**: kaç fırsat gördü, kaçını hangi kuralla reddetti,",
         "> neyi kendisi kapattı. Kirli ilk defter karantinada (`logs/archive/NEDEN.md`); demo metrikleri karantina sonrası temiz defterden.",
         "",
-        summarize(live, "Canlı hesap — OKX TR sub-account, 30 USDT, 2 gözetimli tur"),
-        "Borsadan bağımsız doğrulama (18:30): 4 OCO emri `live`, 4 gerçekleşme, USDT bakiyesi "
-        "30,00 → 20,40 (= 30 − 4 × 2,4). Riskteki para 9,6 USDT; tüm zarar-kes'ler tetiklense kayıp ≈ 0,05 USDT.",
+        summarize(live, "Canlı hesap — OKX TR sub-account, 30 USDT (18:29 iki gözetimli tur, 19:00'dan itibaren otonom)"),
+        "_Elle yazılmış tek not (18:30, borsadan `spot_get_algo_orders` / `account_get_balance` ile):_ "
+        "4 OCO `live`, 4 gerçekleşme, USDT 30,00 → 20,40. 19:00'da zaman stopu dördünü kapattı (`spot_get_fills`: 4 satış).",
         "",
         summarize(demo, "Demo hesap — karantina sonrası temiz defter"),
     ])

@@ -20,6 +20,27 @@ Düzeltildi. Detay: "GERÇEK AĞ KESİNTİSİ" bölümü.
 deftere yazılmış). Karantina: `logs/archive/` + `NEDEN.md`. Teslim metrikleri yalnızca
 17:36 sonrasını kapsar.
 
+## CANLI AJAN SÜREKLİ ÇALIŞIYOR (19:01) — ve 3 düzeltme
+
+`python -u src/agent.py --config config.live.yaml` arka planda, çıktı `logs/agent.live.out`.
+Demo ajan ve panel aynen çalışmaya devam ediyor.
+
+**Hata 7 — kapatma miktarı yanlıştı (canlıda yakalandı, demo maskeliyordu).** Spot komisyonu base coin'den
+kesiliyor; ajan `size/px` kadar satmaya kalkınca elindekinden fazla satar, borsa reddeder, OCO ise çoktan iptal
+edilmiş olur. Düzeltme: satış miktarı borsadaki OCO satırından (`sz`) alınır, yoksa cüzdan bakiyesi lot'a
+yuvarlanır (`_held`). Kapatma başarısızsa deftere yazılır, pozisyon düşürülmez, sonraki tur yeniden denenir.
+Kanıt: 19:00:49–54, 31–32 dk açık 4 canlı pozisyon tek turda kapandı, bakiye 29,97 USDT.
+
+**Hata 8 — demo ve canlı aynı state dosyasını paylaşıyordu.** İlk canlı başlatmada (18:59) ajan demo'nun
+`logs/state.json`'ını okudu, yanlış hesapla Safe Mode kilitledi. Ajan öldürüldü, `logging.state` config'e
+eklendi (`state.json` / `state.live.json`), yanlış kilit kaldırıldı, o turun 8 kaydı canlı defterden çıkarıldı
+(gerekçe: ajanın canlı pozisyonlar hakkında verdiği kararlar değildi).
+
+**Hata 9 — teknik tanık bozuk veriye "alış" diyordu** (ZEC: RSI 0.0, EMA 400, fiyat 1140). Artık
+`0<RSI<100` ve EMA/fiyat oranı 0,5–2 dışında "unknown".
+
+`agent.py --config` bayrağı eklendi; demo ve canlı yan yana kendi dosyalarından çalışır.
+
 ## KALAN İŞ — 18:38 itibarıyla
 | # | İş | Durum |
 |---|---|---|
@@ -33,9 +54,15 @@ deftere yazılmış). Karantina: `logs/archive/` + `NEDEN.md`. Teslim metrikleri
 
 Kilide **52 dk**.
 
+## TESLİM ✅ (18:45)
+**Repo:** https://github.com/osman-ozcanli/agent-trading-emanet — public, dışarıdan doğrulandı:
+kökte README · METRICS · SUNUM · PROGRESS · config · src/ · logs/ · skills-lock; `.env` yok, key yok.
+
 ## SIRADAKİ AKSİYON
-Osman: ekran kaydı → `git init` + commit + push → 19:30'dan önce teslim.
-Ajan demo'da çalışmaya devam ediyor; panel demo defterini gösteriyor.
+1. Ekran kaydı — `SUNUM.md` "Demo akışı" sırasıyla, terminal göstermeden
+2. 19:20 civarı son sicil: `git add logs` → commit → push (ajan yazmaya devam ediyor)
+3. Teslim formuna repo linki + video
+4. 20:00 sunum — `SUNUM.md`; panel ve OKX sekmesi açık
 
 ## CANLI ÇALIŞAN SÜREÇLER
 - `python -u src/agent.py` — otonom döngü, 3 dk'da bir tur

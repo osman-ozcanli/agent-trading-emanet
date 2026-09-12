@@ -39,7 +39,7 @@ def read_journal(cfg: dict[str, Any], limit: int = 200) -> list[dict]:
 
 def read_state(cfg: dict[str, Any]) -> dict[str, Any]:
     """Agent state: open positions, safe mode, day's starting equity."""
-    path = ROOT / cfg["logging"]["dir"] / "state.json"
+    path = ROOT / cfg["logging"].get("state", f'{cfg["logging"]["dir"]}/state.json')
     if not path.exists():
         return {"open": {}, "safe_mode": False, "start_equity": 0}
     try:

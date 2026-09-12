@@ -88,5 +88,6 @@ llm:
 
 logging:
   dir: logs
+  state: logs/state.live.json
   journal: logs/journal.live.jsonl   # CANLI defteri — demo'dan ayri
   decisions: logs/decisions.live.md

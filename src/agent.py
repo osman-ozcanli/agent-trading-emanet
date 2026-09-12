@@ -12,6 +12,7 @@ from __future__ import annotations
 import argparse
 import time
 from datetime import datetime, timezone
+from pathlib import Path
 from typing import Any
 
 import journal
@@ -145,6 +146,13 @@ def _time_stop(cfg: dict[str, Any], st: dict[str, Any]) -> None:
         try:
             _close(cfg, inst_id, pos)
         except (mcp.MCPError, OSError) as exc:
+            # The bracket may already be cancelled: say so loudly, keep the
+            # position on the books and retry next tick. Never drop it silently.
+            pos["unprotected"] = True
+            journal.record(cfg, {
+                "instId": inst_id, "action": "veto", "witnesses": [],
+                "veto_reason": f"KAPATMA BASARISIZ — pozisyon korumasiz olabilir, "
+                               f"sonraki turda yeniden denenecek. Borsa: {str(exc)[:160]}"})
             print(f"  !! {inst_id} zaman stopu basarisiz: {exc}")
             continue
         st["open"].pop(inst_id, None)
@@ -159,19 +167,41 @@ def _time_stop(cfg: dict[str, Any], st: dict[str, Any]) -> None:
 
 
 def _close(cfg: dict[str, Any], inst_id: str, pos: dict[str, Any]) -> None:
-    """Cancel the bracket, then sell the position back at market."""
+    """Cancel the bracket, then sell the position back at market.
+
+    The sell size comes from the exchange, never from our own arithmetic:
+    spot fees are charged in the base coin, so the wallet holds slightly less
+    than size_quote / px. The live OCO row carries the exact net size.
+    """
     trading = cfg["profiles"]["trading"]
+    sz = None
     for row in W._rows(mcp.tool("spot_get_algo_orders", {}, trading)):
         if row.get("instId") == inst_id and row.get("state") == "live":
+            sz = row.get("sz") or sz
             mcp.tool("spot_cancel_algo_order",
                      {"instId": inst_id, "algoId": row.get("algoId")}, trading)
-    base_sz = pos.get("base_sz")
-    if base_sz:
-        mcp.tool("spot_place_order", {
-            "instId": inst_id, "tdMode": "cash", "side": "sell",
-            "ordType": "market", "sz": str(base_sz), "tgtCcy": "base_ccy",
-            "clOrdId": f"{cfg['execution']['client_order_id_prefix']}x{int(time.time())}",
-        }, trading)
+    sz = sz or _held(cfg, inst_id)
+    if not sz:
+        return
+    mcp.tool("spot_place_order", {
+        "instId": inst_id, "tdMode": "cash", "side": "sell",
+        "ordType": "market", "sz": str(sz), "tgtCcy": "base_ccy",
+        "clOrdId": f"{cfg['execution']['client_order_id_prefix']}x{int(time.time())}",
+    }, trading)
+
+
+def _held(cfg: dict[str, Any], inst_id: str) -> str | None:
+    """Base-coin balance actually in the wallet, floored to the pair's lot size."""
+    trading = cfg["profiles"]["trading"]
+    base = inst_id.split("-")[0]
+    rows = W._rows(mcp.tool("account_get_balance", {"ccy": base}, trading))
+    bal = next((float(r.get("availBal") or 0) for r in _flatten_balance(rows)
+                if r.get("ccy") == base), 0.0)
+    inst = W._rows(mcp.tool("market_get_instruments",
+                            {"instType": "SPOT", "instId": inst_id}, trading))
+    lot = float((inst[0] if inst else {}).get("lotSz") or 0) or 1e-8
+    units = int(bal / lot)
+    return f"{units * lot:.10f}".rstrip("0").rstrip(".") if units > 0 else None
 
 
 def _reconcile(cfg: dict[str, Any], st: dict[str, Any]) -> None:
@@ -188,7 +218,8 @@ def _reconcile(cfg: dict[str, Any], st: dict[str, Any]) -> None:
         return  # Cannot verify -> change nothing. Never guess a position closed.
 
     still_open = {r.get("instId") for r in rows if r.get("state") == "live"}
-    closed = [inst for inst in st["open"] if inst not in still_open]
+    closed = [inst for inst, p in st["open"].items()
+              if inst not in still_open and not p.get("unprotected")]
     for inst in closed:
         st["open"].pop(inst, None)
     if closed:
@@ -384,9 +415,11 @@ def main() -> None:
     """Entry point. Errors are logged and the loop continues — it must not die."""
     ap = argparse.ArgumentParser(description="Uc Tanik otonom trading agent")
     ap.add_argument("--once", action="store_true", help="tek tur calis ve cik")
+    ap.add_argument("--config", default=None, help="config dosyasi (varsayilan config.yaml)")
     args = ap.parse_args()
+    cfg_path = Path(args.config).resolve() if args.config else None
 
-    cfg = load_config()
+    cfg = load_config(cfg_path)
     mode = "KURU CALISMA" if cfg["execution"]["dry_run"] else "CANLI EMIR"
     print(f"Agent basladi — profil={cfg['profiles']['trading']} · {mode}")
 
@@ -394,7 +427,7 @@ def main() -> None:
         try:
             # Re-read config each tick: editing config.yaml must take effect
             # without restarting a running agent.
-            cfg = load_config()
+            cfg = load_config(cfg_path)
             tick(cfg)
         except Exception as exc:                     # noqa: BLE001 — loop must survive anything
             print(f"  !! tur hatasi: {exc}")

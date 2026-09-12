@@ -59,6 +59,10 @@ def technical(inst_id: str, cfg: dict[str, Any]) -> Verdict:
     px = float(tick[0]["last"])
     if rsi is None or ema is None:
         return Verdict("teknik", "unknown", "Gosterge verisi bos dondu.", {})
+    # RSI 0.0 with an EMA a third of the price is a broken feed, not a signal.
+    if not 0 < rsi < 100 or not 0.5 < ema / px < 2:
+        return Verdict("teknik", "unknown", f"Gosterge verisi tutarsiz (RSI {rsi}, EMA {ema}, fiyat {px}).",
+                       {"rsi": rsi, "ema": ema, "price": px})
 
     above_ema = px > ema
     if rsi < t["rsi_oversold"] and above_ema:

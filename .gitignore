@@ -24,3 +24,4 @@ Thumbs.db
 # Tool dirs — skills are reinstalled from skills-lock.json via `npx skills add okx/agent-skills`
 .claude/
 .agents/
+logs/agent.live.out

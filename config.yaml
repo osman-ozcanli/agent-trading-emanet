@@ -88,5 +88,6 @@ llm:
 
 logging:
   dir: logs
+  state: logs/state.json
   journal: logs/journal.jsonl        # makine okur / machine-readable
   decisions: logs/decisions.md       # insan okur / human-readable, UX katmani
