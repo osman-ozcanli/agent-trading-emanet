@@ -1,0 +1,92 @@
+# Single source of truth for runtime behaviour. No hardcoded values in code.
+
+capital:
+  mode: demo              # demo | live
+  # Demo account holds 5000 USDT of fake money; live holds ~30 USDT.
+  # Cap it so demo behaviour matches live conditions exactly.
+  virtual_cap_usdt: 30
+
+universe:
+  # USDT pairs, NOT TRY. Measured 14:00:
+  #   - TRY pairs return NO indicator data (RSI/EMA empty); USDT pairs do
+  #   - TRY pairs are illiquid (XRP-TRY 15m volume ~3); USDT pairs are deep
+  #   - min order: BTC-USDT $0.77 vs BTC-TRY $7.70
+  # Upper bound is set by the smartmoney witness, not by preference: it covers
+  # 20 instruments, of which only these 8 are tradable SPOT-USDT pairs (measured 14:50).
+  # A 9th pair would have no smart-money data, so witness 2 would always be "unknown".
+  pairs: [BTC-USDT, ETH-USDT, SOL-USDT, XRP-USDT, DOGE-USDT, ZEC-USDT, OKB-USDT, ORDI-USDT]
+  quote: USDT
+
+risk:
+  max_position_pct: 10      # 3 USDT — kucuk pozisyon = ayni anda daha cok parite
+  max_open_positions: 4
+  daily_loss_limit_pct: 3   # asilirsa Safe Mode (breach -> safe mode)
+  require_stop_loss: true   # stop-loss'suz emir YASAK / forbidden
+
+  # Attached to every buy order so the exchange enforces them, not the agent.
+  # Survives agent crash, network loss, laptop shutdown.
+  exchange_side_brackets: true
+  # Measured 16:43: at +2.0/-1.2 nothing fired for 57 minutes — the agent filled
+  # its position slots and then froze. Tighter brackets on a 15m bar actually turn over.
+  take_profit_pct: 0.8      # net +0.62% after 0.18% round-trip fee
+  stop_loss_pct: 0.5        # net -0.68%
+  max_position_minutes: 8   # demo penceresi kisa: hizli devir = daha cok karar
+  # Cash that may never be deployed. Percentage sizing already leaves ~20 USDT
+  # idle, but an emergent buffer is not a rule — this makes it one, and it also
+  # absorbs the gap between a sell settling and the next buy being sent.
+  min_cash_reserve_pct: 20
+
+execution:
+  order_type: market
+  client_order_id_prefix: agent   # --clOrdId => idempotent retry, no double orders
+  dry_run: false                  # ADIM 6: demo hesaba gercek emir
+
+profiles:
+  # Intelligence comes from the LIVE market (read-only key); execution stays sandboxed.
+  #   okx-demo : demo key, trade permission -> orders + portfolio
+  #   okx-prod : live key, READ-ONLY        -> smartmoney + news (both blocked in demo mode)
+  trading: okx-demo
+  intel: okx-prod       # read-only, cannot place orders — verified 14:25
+
+witnesses:
+  # "Uc Tanik Kurali" — consensus rule, not unanimity:
+  #   - a single dissenting witness kills the trade  (veto right is preserved)
+  #   - at least 2 must actively approve            (a lone voice is not enough)
+  #   - "wait" is neutral: it neither approves nor vetoes
+  # 3/3 was measured too strict on 12.09 — best agreement across 5 pairs was 2/3,
+  # so the agent never traded. This keeps the veto idea while staying reachable.
+  min_approvals: 2
+  allow_dissent: false
+  block_on_unknown: false   # an unreachable witness does not veto, but is recorded
+  technical:            # okx market indicator (no auth needed)
+    enabled: true
+    timeframe: 15m
+    rsi_oversold: 35
+    rsi_overbought: 65
+    ema_period: 20
+  smartmoney:           # okx smartmoney signal-overview-by-filter
+    enabled: true
+    period: 7
+  sentiment:            # okx news coin-sentiment (needs profiles.news)
+    enabled: true
+    bullish_threshold: 0.45
+    bearish_threshold: 0.45
+
+loop:
+  # Sense -> Reason -> Act -> Evaluate
+  interval_seconds: 180   # tarama sik, islem seyrek (scan often, trade rarely)
+
+llm:
+  # Headless Claude Code — uses the existing subscription, no separate API key.
+  # MCP servers are explicitly NOT loaded here: 16 servers took 91s to start,
+  # versus 5s with none. The LLM layer must never slow the trading loop.
+  enabled: false   # ADIM 7: zaman kutusu asildi, karar yolunda LLM YOK (bilincli)
+  model: haiku
+  mcp_config: no-mcp.json
+  timeout_seconds: 45
+  explain_decisions: true    # write a plain-Turkish paragraph per decision
+
+logging:
+  dir: logs
+  journal: logs/journal.jsonl        # makine okur / machine-readable
+  decisions: logs/decisions.md       # insan okur / human-readable, UX katmani

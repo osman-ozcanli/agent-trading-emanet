@@ -1,0 +1,26 @@
+# Secrets — never commit. OKX keys live in ~/.okx/config.toml, outside this repo.
+.env
+*.key
+config.local.*
+
+# Journals ARE the evidence and are committed on purpose (logs/journal*.jsonl,
+# decisions*.md, state*.json, archive/). Only the raw console stream is excluded.
+logs/agent.out
+
+# Runtime
+node_modules/
+__pycache__/
+.venv/
+*.pyc
+no-mcp.json
+
+# OS / editor / stray files
+Thumbs.db
+.DS_Store
+*.doc
+*.png
+*.jpeg
+
+# Tool dirs — skills are reinstalled from skills-lock.json via `npx skills add okx/agent-skills`
+.claude/
+.agents/
