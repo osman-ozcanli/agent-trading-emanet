@@ -18,6 +18,7 @@ from typing import Any
 import journal
 import mcp
 import metrics
+import sunum_guncelle
 import risk
 import state
 import witnesses as W
@@ -416,6 +417,12 @@ def tick(cfg: dict[str, Any]) -> None:
         metrics.build()
     except OSError as exc:
         print(f"  !! METRICS.md yazilamadi: {exc}")
+    # Same for the deck: slide numbers follow the ledger, nobody retypes them.
+    # Fails harmlessly while PowerPoint holds the file open.
+    try:
+        sunum_guncelle.main()
+    except Exception as exc:                     # noqa: BLE001 — never stall the loop for a slide
+        print(f"  !! sunum guncellenemedi: {exc}")
 
 
 def main() -> None:

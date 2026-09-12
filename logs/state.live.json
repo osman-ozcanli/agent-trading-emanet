@@ -4,44 +4,24 @@
   "open": {
     "ETH-USDT": {
       "side": "buy",
-      "entry": 2534.43,
-      "opened_at": 1789229983.1295114,
-      "base_sz": 0.00094696,
+      "entry": 2530.97,
+      "opened_at": 1789231902.9664152,
+      "base_sz": 0.00094825,
       "sz": 2.4,
-      "tp": 2554.70544,
-      "sl": 2521.75785,
-      "clOrdId": "agent1789229981"
+      "tp": 2551.21776,
+      "sl": 2518.31515,
+      "clOrdId": "agent1789231900"
     },
     "SOL-USDT": {
       "side": "buy",
-      "entry": 102.01,
-      "opened_at": 1789229987.1389325,
-      "base_sz": 0.02352711,
+      "entry": 102.03,
+      "opened_at": 1789231906.989457,
+      "base_sz": 0.02352249,
       "sz": 2.4,
-      "tp": 102.82608,
-      "sl": 101.49995,
-      "clOrdId": "agent1789229985"
-    },
-    "XRP-USDT": {
-      "side": "buy",
-      "entry": 1.3712,
-      "opened_at": 1789229991.0580714,
-      "base_sz": 1.75029172,
-      "sz": 2.4,
-      "tp": 1.38217,
-      "sl": 1.364344,
-      "clOrdId": "agent1789229989"
-    },
-    "OKB-USDT": {
-      "side": "buy",
-      "entry": 113.72,
-      "opened_at": 1789229997.690762,
-      "base_sz": 0.02110447,
-      "sz": 2.4,
-      "tp": 114.62976,
-      "sl": 113.1514,
-      "clOrdId": "agent1789229995"
+      "tp": 102.84624,
+      "sl": 101.51985,
+      "clOrdId": "agent1789231904"
     }
   },
-  "safe_mode": false
+  "safe_mode": true
 }

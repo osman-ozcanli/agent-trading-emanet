@@ -1,8 +1,39 @@
 {
   "day": "2026-09-12",
   "start_equity": 30.0,
-  "open": {},
-  "safe_mode": true,
+  "open": {
+    "ETH-USDT": {
+      "side": "buy",
+      "entry": 2531.14,
+      "opened_at": 1789231925.5507894,
+      "base_sz": 0.00094819,
+      "sz": 2.4,
+      "tp": 2551.38912,
+      "sl": 2518.4843,
+      "clOrdId": "agent1789231923"
+    },
+    "SOL-USDT": {
+      "side": "buy",
+      "entry": 102.03,
+      "opened_at": 1789231929.4806414,
+      "base_sz": 0.02352249,
+      "sz": 2.4,
+      "tp": 102.84624,
+      "sl": 101.51985,
+      "clOrdId": "agent1789231927"
+    },
+    "XRP-USDT": {
+      "side": "buy",
+      "entry": 1.3702,
+      "opened_at": 1789231933.4099624,
+      "base_sz": 1.75156911,
+      "sz": 2.4,
+      "tp": 1.381162,
+      "sl": 1.363349,
+      "clOrdId": "agent1789231931"
+    }
+  },
+  "safe_mode": false,
   "no_bracket": [
     "OKB-USDT",
     "ORDI-USDT"

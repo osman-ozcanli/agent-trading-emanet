@@ -1,6 +1,6 @@
 # EMANET — performans metrikleri
 
-Üretildi: 12.09.2026 19:23 · ajan her turun sonunda kendisi yeniler (`src/metrics.py`) · tablolar defterden üretilir.
+Üretildi: 12.09.2026 19:55 · ajan her turun sonunda kendisi yeniler (`src/metrics.py`) · tablolar defterden üretilir.
 
 > Hesap getirisi bu yarışmada puanlanmıyor ve burada iddia edilmiyor. Ölçülen şey ajanın
 > **karar kalitesi ve hesap verebilirliği**: kaç fırsat gördü, kaçını hangi kuralla reddetti,
@@ -8,25 +8,27 @@
 
 ## Canlı hesap — OKX TR sub-account, 30 USDT (18:29 iki gözetimli tur, 19:00'dan itibaren otonom)
 
-Kayıt aralığı **18:29:06 – 19:23:16** (54 dk) · kaynak `journal`
+Kayıt aralığı **18:29:06 – 19:55:18** (86 dk) · kaynak `journal`
 
 | Metrik | Değer |
 |---|---|
-| Karar | **84** |
-| Fırsat (al/sat sinyali üretilen) | 45 |
-| Gönderilen emir | **16** — 38.40 USDT |
-| Risk kapısı reddi | **29** (fırsatların %64'i) |
-| Ajanın kendi kapattığı pozisyon | 12 |
-| Bekleme kararı | 27 |
-| Ulaşılamayan tanık okuması | 0 |
+| Karar | **191** |
+| Fırsat (al/sat sinyali üretilen) | 89 |
+| Gönderilen emir | **22** — 51.57 USDT |
+| Risk kapısı reddi | **67** (fırsatların %75'i) |
+| Ajanın kendi kapattığı pozisyon | 19 |
+| Bekleme kararı | 83 |
+| Ulaşılamayan tanık okuması | 120 |
 
 ### Hangi kural kaç kez devreye girdi
 
 | Kural | Kez |
 |---|---|
-| Ayni paritede zaten acik pozisyon var | 20 |
-| Zaman stopu — ajan pozisyonu kendisi kapatti | 12 |
-| Acik pozisyon limiti dolu | 9 |
+| Ayni paritede zaten acik pozisyon var | 34 |
+| Zaman stopu — ajan pozisyonu kendisi kapatti | 19 |
+| KAPATMA BASARISIZ — pozisyon korumasiz olabilir, sonraki tur | 17 |
+| Acik pozisyon limiti dolu | 12 |
+| Safe Mode aktif | 4 |
 
 ### Emirler
 
@@ -48,32 +50,38 @@ Kayıt aralığı **18:29:06 – 19:23:16** (54 dk) · kaynak `journal`
 | 19:19:47 | SOL-USDT | 2.4 | 102.82608 | 101.49995 |
 | 19:19:51 | XRP-USDT | 2.4 | 1.38217 | 1.364344 |
 | 19:19:57 | OKB-USDT | 2.4 | 114.62976 | 113.1514 |
+| 19:26:41 | OKB-USDT | 1.68 | 114.21648 | 112.74345 |
+| 19:29:57 | ETH-USDT | 2.23 | 2552.90112 | 2519.9768 |
+| 19:30:01 | SOL-USDT | 2.23 | 102.8664 | 101.53975 |
+| 19:30:05 | XRP-USDT | 2.23 | 1.381565 | 1.363747 |
+| 19:51:42 | ETH-USDT | 2.4 | 2551.21776 | 2518.31515 |
+| 19:51:46 | SOL-USDT | 2.4 | 102.84624 | 101.51985 |
 
 _Elle yazılmış tek not (18:30, borsadan `spot_get_algo_orders` / `account_get_balance` ile):_ 4 OCO `live`, 4 gerçekleşme, USDT 30,00 → 20,40. 19:00'da zaman stopu dördünü kapattı (`spot_get_fills`: 4 satış).
 
 ## Demo hesap — karantina sonrası temiz defter
 
-Kayıt aralığı **17:29:46 – 19:20:35** (111 dk) · kaynak `journal`
+Kayıt aralığı **17:29:46 – 19:52:19** (143 dk) · kaynak `journal`
 
 | Metrik | Değer |
 |---|---|
-| Karar | **311** |
-| Fırsat (al/sat sinyali üretilen) | 180 |
-| Gönderilen emir | **20** — 49.36 USDT |
-| Risk kapısı reddi | **160** (fırsatların %89'i) |
-| Ajanın kendi kapattığı pozisyon | 23 |
-| Bekleme kararı | 108 |
-| Ulaşılamayan tanık okuması | 160 |
+| Karar | **394** |
+| Fırsat (al/sat sinyali üretilen) | 210 |
+| Gönderilen emir | **26** — 63.76 USDT |
+| Risk kapısı reddi | **184** (fırsatların %88'i) |
+| Ajanın kendi kapattığı pozisyon | 26 |
+| Bekleme kararı | 158 |
+| Ulaşılamayan tanık okuması | 285 |
 
 ### Hangi kural kaç kez devreye girdi
 
 | Kural | Kez |
 |---|---|
-| Borsa koruma emri olusturmuyor — pozisyon geri alindi, parite kapali | 59 |
-| Ayni paritede zaten acik pozisyon var | 46 |
-| Safe Mode aktif | 32 |
-| Borsanin minimum emir tutarinin altinda | 23 |
-| Zaman stopu — ajan pozisyonu kendisi kapatti | 23 |
+| Borsa koruma emri olusturmuyor — pozisyon geri alindi, parite kapali | 69 |
+| Ayni paritede zaten acik pozisyon var | 49 |
+| Safe Mode aktif | 40 |
+| Borsanin minimum emir tutarinin altinda | 26 |
+| Zaman stopu — ajan pozisyonu kendisi kapatti | 26 |
 
 ### Emirler
 
@@ -99,3 +107,9 @@ Kayıt aralığı **17:29:46 – 19:20:35** (111 dk) · kaynak `journal`
 | 18:51:00 | ETH-USDT | 2.4 | 2553.50592 | 2520.5738 |
 | 18:51:04 | SOL-USDT | 2.4 | 102.80592 | 101.48005 |
 | 18:51:08 | XRP-USDT | 2.4 | 1.38348 | 1.365638 |
+| 19:30:21 | ETH-USDT | 2.4 | 2553.23376 | 2520.30515 |
+| 19:30:26 | SOL-USDT | 2.4 | 102.85632 | 101.5298 |
+| 19:30:30 | XRP-USDT | 2.4 | 1.381565 | 1.363747 |
+| 19:52:05 | ETH-USDT | 2.4 | 2551.38912 | 2518.4843 |
+| 19:52:09 | SOL-USDT | 2.4 | 102.84624 | 101.51985 |
+| 19:52:13 | XRP-USDT | 2.4 | 1.381162 | 1.363349 |

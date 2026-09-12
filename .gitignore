@@ -25,3 +25,7 @@ Thumbs.db
 .claude/
 .agents/
 logs/agent.live.out
+
+# Sunum sablonu: ajan her turda bundan uretir, repoya girmez
+EMANET-sunum.orig.pptx
+*.tmp

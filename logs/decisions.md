@@ -2541,3 +2541,838 @@
 
 > ⛔ **Risk kapisi durdurdu:** ORDI-USDT: bu paritede borsa koruma emri olusturmuyor, stop-loss'suz islem yapilmaz. Oturum boyunca kapali.
 
+### ⏸️ 2026-09-12T19:26:58 — BTC-USDT — BEKLEDI
+
+- **teknik** (🔴): RSI 73.6 (asiri alim) ve fiyat EMA20 altinda.
+- **akilli_para** (🟢): Basarili traderlarin %82'i alis yonunde (18 alici / 12 satici).
+- **duygu** (⏸️): Haber havasi notr (pozitif 0.36 / negatif 0.24, 1387 haber).
+
+### ⛔ 2026-09-12T19:27:00 — ETH-USDT — RISK KAPISI ENGELLEDI
+
+- **teknik** (⏸️): RSI 45.1 notr bolgede, fiyat EMA20'in altinda.
+- **akilli_para** (🟢): Basarili traderlarin %92'i alis yonunde (27 alici / 13 satici).
+- **duygu** (🟢): Haber akisi olumlu (pozitif 0.47 / negatif 0.12, 761 haber).
+
+> ⛔ **Risk kapisi durdurdu:** Safe Mode aktif — gunluk kayip limiti asilmisti, yeni islem yok.
+
+### ⛔ 2026-09-12T19:27:02 — SOL-USDT — RISK KAPISI ENGELLEDI
+
+- **teknik** (⏸️): RSI 47.1 notr bolgede, fiyat EMA20'in altinda.
+- **akilli_para** (🟢): Basarili traderlarin %91'i alis yonunde (10 alici / 2 satici).
+- **duygu** (🟢): Haber akisi olumlu (pozitif 0.57 / negatif 0.09, 878 haber).
+
+> ⛔ **Risk kapisi durdurdu:** Safe Mode aktif — gunluk kayip limiti asilmisti, yeni islem yok.
+
+### ⛔ 2026-09-12T19:27:05 — XRP-USDT — RISK KAPISI ENGELLEDI
+
+- **teknik** (⏸️): RSI 50.7 notr bolgede, fiyat EMA20'in altinda.
+- **akilli_para** (🟢): Basarili traderlarin %100'i alis yonunde (6 alici / 2 satici).
+- **duygu** (🟢): Haber akisi olumlu (pozitif 0.56 / negatif 0.11, 81 haber).
+
+> ⛔ **Risk kapisi durdurdu:** Safe Mode aktif — gunluk kayip limiti asilmisti, yeni islem yok.
+
+### ⏸️ 2026-09-12T19:27:06 — DOGE-USDT — BEKLEDI
+
+- **teknik** (⏸️): RSI 52.3 notr bolgede, fiyat EMA20'in altinda.
+- **akilli_para** (🟢): Basarili traderlarin %98'i alis yonunde (8 alici / 2 satici).
+- **duygu** (🔴): Haber akisi olumsuz (negatif 0.45 / pozitif 0.32, 74 haber).
+
+### ⛔ 2026-09-12T19:27:08 — ZEC-USDT — RISK KAPISI ENGELLEDI
+
+- **teknik** (🟢): RSI 0.0 (asiri satim) ve fiyat EMA20 uzerinde.
+- **akilli_para** (⏸️): Basarili traderlar bolunmus durumda (%42 alis). Net yon yok.
+- **duygu** (🟢): Haber akisi olumlu (pozitif 0.46 / negatif 0.21, 194 haber).
+
+> ⛔ **Risk kapisi durdurdu:** Safe Mode aktif — gunluk kayip limiti asilmisti, yeni islem yok.
+
+### ⛔ 2026-09-12T19:27:10 — OKB-USDT — RISK KAPISI ENGELLEDI
+
+- **teknik** (⏸️): RSI 30.9 notr bolgede, fiyat EMA20'in altinda.
+- **akilli_para** (🟢): Basarili traderlarin %100'i alis yonunde (6 alici / 0 satici).
+- **duygu** (🟢): Haber akisi olumlu (pozitif 0.50 / negatif 0.00, 10 haber).
+
+> ⛔ **Risk kapisi durdurdu:** OKB-USDT: bu paritede borsa koruma emri olusturmuyor, stop-loss'suz islem yapilmaz. Oturum boyunca kapali.
+
+### ⛔ 2026-09-12T19:27:12 — ORDI-USDT — RISK KAPISI ENGELLEDI
+
+- **teknik** (❓): Gosterge verisi bos dondu.
+- **akilli_para** (🟢): Basarili traderlarin %100'i alis yonunde (4 alici / 0 satici).
+- **duygu** (🟢): Haber akisi olumlu (pozitif 1.00 / negatif 0.00, 1 haber).
+
+> ⛔ **Risk kapisi durdurdu:** ORDI-USDT: bu paritede borsa koruma emri olusturmuyor, stop-loss'suz islem yapilmaz. Oturum boyunca kapali.
+
+### ⏸️ 2026-09-12T19:30:17 — BTC-USDT — BEKLEDI
+
+- **teknik** (⏸️): RSI 64.9 notr bolgede, fiyat EMA20'in altinda.
+- **akilli_para** (🟢): Basarili traderlarin %82'i alis yonunde (18 alici / 12 satici).
+- **duygu** (⏸️): Haber havasi notr (pozitif 0.36 / negatif 0.24, 1387 haber).
+
+### 🟢 2026-09-12T19:30:21 — ETH-USDT — ALIM
+
+- **teknik** (⏸️): RSI 44.5 notr bolgede, fiyat EMA20'in altinda.
+- **akilli_para** (🟢): Basarili traderlarin %92'i alis yonunde (27 alici / 13 satici).
+- **duygu** (🟢): Haber akisi olumlu (pozitif 0.47 / negatif 0.12, 761 haber).
+
+> Emir: 2.4 ETH-USDT · kar-al 2553.23376 · zarar-kes 2520.30515 · id `agent1789230619`
+
+### 🟢 2026-09-12T19:30:26 — SOL-USDT — ALIM
+
+- **teknik** (⏸️): RSI 50.0 notr bolgede, fiyat EMA20'in ustunde.
+- **akilli_para** (🟢): Basarili traderlarin %91'i alis yonunde (10 alici / 2 satici).
+- **duygu** (🟢): Haber akisi olumlu (pozitif 0.57 / negatif 0.09, 878 haber).
+
+> Emir: 2.4 SOL-USDT · kar-al 102.85632 · zarar-kes 101.5298 · id `agent1789230624`
+
+### 🟢 2026-09-12T19:30:30 — XRP-USDT — ALIM
+
+- **teknik** (⏸️): RSI 51.9 notr bolgede, fiyat EMA20'in ustunde.
+- **akilli_para** (🟢): Basarili traderlarin %100'i alis yonunde (6 alici / 2 satici).
+- **duygu** (🟢): Haber akisi olumlu (pozitif 0.56 / negatif 0.11, 81 haber).
+
+> Emir: 2.4 XRP-USDT · kar-al 1.381565 · zarar-kes 1.363747 · id `agent1789230628`
+
+### ⏸️ 2026-09-12T19:30:31 — DOGE-USDT — BEKLEDI
+
+- **teknik** (⏸️): RSI 52.4 notr bolgede, fiyat EMA20'in ustunde.
+- **akilli_para** (🟢): Basarili traderlarin %98'i alis yonunde (8 alici / 2 satici).
+- **duygu** (🔴): Haber akisi olumsuz (negatif 0.45 / pozitif 0.32, 74 haber).
+
+### ⛔ 2026-09-12T19:30:33 — ZEC-USDT — RISK KAPISI ENGELLEDI
+
+- **teknik** (🟢): RSI 0.0 (asiri satim) ve fiyat EMA20 uzerinde.
+- **akilli_para** (⏸️): Basarili traderlar bolunmus durumda (%42 alis). Net yon yok.
+- **duygu** (🟢): Haber akisi olumlu (pozitif 0.46 / negatif 0.21, 194 haber).
+
+> ⛔ **Risk kapisi durdurdu:** Pozisyon buyuklugu (2.40) borsanin minimum emir tutarinin (11.43) altinda.
+
+### ⛔ 2026-09-12T19:30:34 — OKB-USDT — RISK KAPISI ENGELLEDI
+
+- **teknik** (⏸️): RSI 28.8 notr bolgede, fiyat EMA20'in altinda.
+- **akilli_para** (🟢): Basarili traderlarin %100'i alis yonunde (6 alici / 0 satici).
+- **duygu** (🟢): Haber akisi olumlu (pozitif 0.50 / negatif 0.00, 10 haber).
+
+> ⛔ **Risk kapisi durdurdu:** OKB-USDT: bu paritede borsa koruma emri olusturmuyor, stop-loss'suz islem yapilmaz. Oturum boyunca kapali.
+
+### ⛔ 2026-09-12T19:30:36 — ORDI-USDT — RISK KAPISI ENGELLEDI
+
+- **teknik** (❓): Gosterge verisi bos dondu.
+- **akilli_para** (🟢): Basarili traderlarin %100'i alis yonunde (4 alici / 0 satici).
+- **duygu** (🟢): Haber akisi olumlu (pozitif 1.00 / negatif 0.00, 1 haber).
+
+> ⛔ **Risk kapisi durdurdu:** ORDI-USDT: bu paritede borsa koruma emri olusturmuyor, stop-loss'suz islem yapilmaz. Oturum boyunca kapali.
+
+### ⏸️ 2026-09-12T19:33:40 — BTC-USDT — BEKLEDI
+
+- **teknik** (🔴): RSI 73.0 (asiri alim) ve fiyat EMA20 altinda.
+- **akilli_para** (🟢): Basarili traderlarin %82'i alis yonunde (18 alici / 12 satici).
+- **duygu** (⏸️): Haber havasi notr (pozitif 0.36 / negatif 0.24, 1387 haber).
+
+### ⛔ 2026-09-12T19:33:41 — ETH-USDT — RISK KAPISI ENGELLEDI
+
+- **teknik** (⏸️): RSI 44.5 notr bolgede, fiyat EMA20'in altinda.
+- **akilli_para** (🟢): Basarili traderlarin %92'i alis yonunde (27 alici / 13 satici).
+- **duygu** (🟢): Haber akisi olumlu (pozitif 0.47 / negatif 0.12, 761 haber).
+
+> ⛔ **Risk kapisi durdurdu:** ETH-USDT icin borsada zaten acik bir pozisyon var; ayni pariteye ikinci kez girilmez.
+
+### ⛔ 2026-09-12T19:33:42 — SOL-USDT — RISK KAPISI ENGELLEDI
+
+- **teknik** (⏸️): RSI 53.1 notr bolgede, fiyat EMA20'in altinda.
+- **akilli_para** (🟢): Basarili traderlarin %91'i alis yonunde (10 alici / 2 satici).
+- **duygu** (🟢): Haber akisi olumlu (pozitif 0.57 / negatif 0.09, 878 haber).
+
+> ⛔ **Risk kapisi durdurdu:** SOL-USDT icin borsada zaten acik bir pozisyon var; ayni pariteye ikinci kez girilmez.
+
+### ⛔ 2026-09-12T19:33:43 — XRP-USDT — RISK KAPISI ENGELLEDI
+
+- **teknik** (⏸️): RSI 50.6 notr bolgede, fiyat EMA20'in altinda.
+- **akilli_para** (🟢): Basarili traderlarin %100'i alis yonunde (6 alici / 2 satici).
+- **duygu** (🟢): Haber akisi olumlu (pozitif 0.56 / negatif 0.11, 81 haber).
+
+> ⛔ **Risk kapisi durdurdu:** XRP-USDT icin borsada zaten acik bir pozisyon var; ayni pariteye ikinci kez girilmez.
+
+### ⏸️ 2026-09-12T19:33:45 — DOGE-USDT — BEKLEDI
+
+- **teknik** (⏸️): RSI 52.4 notr bolgede, fiyat EMA20'in altinda.
+- **akilli_para** (🟢): Basarili traderlarin %98'i alis yonunde (8 alici / 2 satici).
+- **duygu** (🔴): Haber akisi olumsuz (negatif 0.45 / pozitif 0.32, 74 haber).
+
+### ⛔ 2026-09-12T19:33:47 — ZEC-USDT — RISK KAPISI ENGELLEDI
+
+- **teknik** (🟢): RSI 0.0 (asiri satim) ve fiyat EMA20 uzerinde.
+- **akilli_para** (⏸️): Basarili traderlar bolunmus durumda (%42 alis). Net yon yok.
+- **duygu** (🟢): Haber akisi olumlu (pozitif 0.46 / negatif 0.21, 194 haber).
+
+> ⛔ **Risk kapisi durdurdu:** Pozisyon buyuklugu (1.68) borsanin minimum emir tutarinin (11.40) altinda.
+
+### ⛔ 2026-09-12T19:33:48 — OKB-USDT — RISK KAPISI ENGELLEDI
+
+- **teknik** (⏸️): RSI 31.9 notr bolgede, fiyat EMA20'in altinda.
+- **akilli_para** (🟢): Basarili traderlarin %100'i alis yonunde (6 alici / 0 satici).
+- **duygu** (🟢): Haber akisi olumlu (pozitif 0.50 / negatif 0.00, 10 haber).
+
+> ⛔ **Risk kapisi durdurdu:** OKB-USDT: bu paritede borsa koruma emri olusturmuyor, stop-loss'suz islem yapilmaz. Oturum boyunca kapali.
+
+### ⛔ 2026-09-12T19:33:49 — ORDI-USDT — RISK KAPISI ENGELLEDI
+
+- **teknik** (❓): Gosterge verisi bos dondu.
+- **akilli_para** (🟢): Basarili traderlarin %100'i alis yonunde (4 alici / 0 satici).
+- **duygu** (🟢): Haber akisi olumlu (pozitif 1.00 / negatif 0.00, 1 haber).
+
+> ⛔ **Risk kapisi durdurdu:** ORDI-USDT: bu paritede borsa koruma emri olusturmuyor, stop-loss'suz islem yapilmaz. Oturum boyunca kapali.
+
+### ⏸️ 2026-09-12T19:36:50 — BTC-USDT — BEKLEDI
+
+- **teknik** (❓): Teknik veri alinamadi: market_get_indicator: {
+  "tool": "market_get_indicator",
+  "error": true,
+  "type": "NetworkError",
+  "message": "Failed to call OKX endpoint POST /api/v5/aigc/mcp/indicators.",
+  "suggestion": "Please check network connectivity and retry the request in a few seconds.",
+  "endpoint": "POST /api/v5/aigc/mcp/indicators",
+
+- **akilli_para** (❓): BTC icin akilli para verisi yok.
+- **duygu** (❓): BTC icin haber verisi yok.
+
+### ⏸️ 2026-09-12T19:36:50 — ETH-USDT — BEKLEDI
+
+- **teknik** (❓): Teknik veri alinamadi: market_get_indicator: {
+  "tool": "market_get_indicator",
+  "error": true,
+  "type": "NetworkError",
+  "message": "Failed to call OKX endpoint POST /api/v5/aigc/mcp/indicators.",
+  "suggestion": "Please check network connectivity and retry the request in a few seconds.",
+  "endpoint": "POST /api/v5/aigc/mcp/indicators",
+
+- **akilli_para** (❓): ETH icin akilli para verisi yok.
+- **duygu** (❓): ETH icin haber verisi yok.
+
+### ⏸️ 2026-09-12T19:36:50 — SOL-USDT — BEKLEDI
+
+- **teknik** (❓): Teknik veri alinamadi: market_get_indicator: {
+  "tool": "market_get_indicator",
+  "error": true,
+  "type": "NetworkError",
+  "message": "Failed to call OKX endpoint POST /api/v5/aigc/mcp/indicators.",
+  "suggestion": "Please check network connectivity and retry the request in a few seconds.",
+  "endpoint": "POST /api/v5/aigc/mcp/indicators",
+
+- **akilli_para** (❓): SOL icin akilli para verisi yok.
+- **duygu** (❓): SOL icin haber verisi yok.
+
+### ⏸️ 2026-09-12T19:36:50 — XRP-USDT — BEKLEDI
+
+- **teknik** (❓): Teknik veri alinamadi: market_get_indicator: {
+  "tool": "market_get_indicator",
+  "error": true,
+  "type": "NetworkError",
+  "message": "Failed to call OKX endpoint POST /api/v5/aigc/mcp/indicators.",
+  "suggestion": "Please check network connectivity and retry the request in a few seconds.",
+  "endpoint": "POST /api/v5/aigc/mcp/indicators",
+
+- **akilli_para** (❓): XRP icin akilli para verisi yok.
+- **duygu** (❓): XRP icin haber verisi yok.
+
+### ⏸️ 2026-09-12T19:36:50 — DOGE-USDT — BEKLEDI
+
+- **teknik** (❓): Teknik veri alinamadi: market_get_indicator: {
+  "tool": "market_get_indicator",
+  "error": true,
+  "type": "NetworkError",
+  "message": "Failed to call OKX endpoint POST /api/v5/aigc/mcp/indicators.",
+  "suggestion": "Please check network connectivity and retry the request in a few seconds.",
+  "endpoint": "POST /api/v5/aigc/mcp/indicators",
+
+- **akilli_para** (❓): DOGE icin akilli para verisi yok.
+- **duygu** (❓): DOGE icin haber verisi yok.
+
+### ⏸️ 2026-09-12T19:36:50 — ZEC-USDT — BEKLEDI
+
+- **teknik** (❓): Teknik veri alinamadi: market_get_indicator: {
+  "tool": "market_get_indicator",
+  "error": true,
+  "type": "NetworkError",
+  "message": "Failed to call OKX endpoint POST /api/v5/aigc/mcp/indicators.",
+  "suggestion": "Please check network connectivity and retry the request in a few seconds.",
+  "endpoint": "POST /api/v5/aigc/mcp/indicators",
+
+- **akilli_para** (❓): ZEC icin akilli para verisi yok.
+- **duygu** (❓): ZEC icin haber verisi yok.
+
+### ⏸️ 2026-09-12T19:36:50 — OKB-USDT — BEKLEDI
+
+- **teknik** (❓): Teknik veri alinamadi: market_get_indicator: {
+  "tool": "market_get_indicator",
+  "error": true,
+  "type": "NetworkError",
+  "message": "Failed to call OKX endpoint POST /api/v5/aigc/mcp/indicators.",
+  "suggestion": "Please check network connectivity and retry the request in a few seconds.",
+  "endpoint": "POST /api/v5/aigc/mcp/indicators",
+
+- **akilli_para** (❓): OKB icin akilli para verisi yok.
+- **duygu** (❓): OKB icin haber verisi yok.
+
+### ⏸️ 2026-09-12T19:36:50 — ORDI-USDT — BEKLEDI
+
+- **teknik** (❓): Teknik veri alinamadi: market_get_indicator: {
+  "tool": "market_get_indicator",
+  "error": true,
+  "type": "NetworkError",
+  "message": "Failed to call OKX endpoint POST /api/v5/aigc/mcp/indicators.",
+  "suggestion": "Please check network connectivity and retry the request in a few seconds.",
+  "endpoint": "POST /api/v5/aigc/mcp/indicators",
+
+- **akilli_para** (❓): ORDI icin akilli para verisi yok.
+- **duygu** (❓): ORDI icin haber verisi yok.
+
+### ⏸️ 2026-09-12T19:39:50 — BTC-USDT — BEKLEDI
+
+- **teknik** (❓): Teknik veri alinamadi: market_get_indicator: {
+  "tool": "market_get_indicator",
+  "error": true,
+  "type": "NetworkError",
+  "message": "Failed to call OKX endpoint POST /api/v5/aigc/mcp/indicators.",
+  "suggestion": "Please check network connectivity and retry the request in a few seconds.",
+  "endpoint": "POST /api/v5/aigc/mcp/indicators",
+
+- **akilli_para** (❓): BTC icin akilli para verisi yok.
+- **duygu** (❓): BTC icin haber verisi yok.
+
+### ⏸️ 2026-09-12T19:39:50 — ETH-USDT — BEKLEDI
+
+- **teknik** (❓): Teknik veri alinamadi: market_get_indicator: {
+  "tool": "market_get_indicator",
+  "error": true,
+  "type": "NetworkError",
+  "message": "Failed to call OKX endpoint POST /api/v5/aigc/mcp/indicators.",
+  "suggestion": "Please check network connectivity and retry the request in a few seconds.",
+  "endpoint": "POST /api/v5/aigc/mcp/indicators",
+
+- **akilli_para** (❓): ETH icin akilli para verisi yok.
+- **duygu** (❓): ETH icin haber verisi yok.
+
+### ⏸️ 2026-09-12T19:39:50 — SOL-USDT — BEKLEDI
+
+- **teknik** (❓): Teknik veri alinamadi: market_get_indicator: {
+  "tool": "market_get_indicator",
+  "error": true,
+  "type": "NetworkError",
+  "message": "Failed to call OKX endpoint POST /api/v5/aigc/mcp/indicators.",
+  "suggestion": "Please check network connectivity and retry the request in a few seconds.",
+  "endpoint": "POST /api/v5/aigc/mcp/indicators",
+
+- **akilli_para** (❓): SOL icin akilli para verisi yok.
+- **duygu** (❓): SOL icin haber verisi yok.
+
+### ⏸️ 2026-09-12T19:39:50 — XRP-USDT — BEKLEDI
+
+- **teknik** (❓): Teknik veri alinamadi: market_get_indicator: {
+  "tool": "market_get_indicator",
+  "error": true,
+  "type": "NetworkError",
+  "message": "Failed to call OKX endpoint POST /api/v5/aigc/mcp/indicators.",
+  "suggestion": "Please check network connectivity and retry the request in a few seconds.",
+  "endpoint": "POST /api/v5/aigc/mcp/indicators",
+
+- **akilli_para** (❓): XRP icin akilli para verisi yok.
+- **duygu** (❓): XRP icin haber verisi yok.
+
+### ⏸️ 2026-09-12T19:39:50 — DOGE-USDT — BEKLEDI
+
+- **teknik** (❓): Teknik veri alinamadi: market_get_indicator: {
+  "tool": "market_get_indicator",
+  "error": true,
+  "type": "NetworkError",
+  "message": "Failed to call OKX endpoint POST /api/v5/aigc/mcp/indicators.",
+  "suggestion": "Please check network connectivity and retry the request in a few seconds.",
+  "endpoint": "POST /api/v5/aigc/mcp/indicators",
+
+- **akilli_para** (❓): DOGE icin akilli para verisi yok.
+- **duygu** (❓): DOGE icin haber verisi yok.
+
+### ⏸️ 2026-09-12T19:39:50 — ZEC-USDT — BEKLEDI
+
+- **teknik** (❓): Teknik veri alinamadi: market_get_indicator: {
+  "tool": "market_get_indicator",
+  "error": true,
+  "type": "NetworkError",
+  "message": "Failed to call OKX endpoint POST /api/v5/aigc/mcp/indicators.",
+  "suggestion": "Please check network connectivity and retry the request in a few seconds.",
+  "endpoint": "POST /api/v5/aigc/mcp/indicators",
+
+- **akilli_para** (❓): ZEC icin akilli para verisi yok.
+- **duygu** (❓): ZEC icin haber verisi yok.
+
+### ⏸️ 2026-09-12T19:39:51 — OKB-USDT — BEKLEDI
+
+- **teknik** (❓): Teknik veri alinamadi: market_get_indicator: {
+  "tool": "market_get_indicator",
+  "error": true,
+  "type": "NetworkError",
+  "message": "Failed to call OKX endpoint POST /api/v5/aigc/mcp/indicators.",
+  "suggestion": "Please check network connectivity and retry the request in a few seconds.",
+  "endpoint": "POST /api/v5/aigc/mcp/indicators",
+
+- **akilli_para** (❓): OKB icin akilli para verisi yok.
+- **duygu** (❓): OKB icin haber verisi yok.
+
+### ⏸️ 2026-09-12T19:39:51 — ORDI-USDT — BEKLEDI
+
+- **teknik** (❓): Teknik veri alinamadi: market_get_indicator: {
+  "tool": "market_get_indicator",
+  "error": true,
+  "type": "NetworkError",
+  "message": "Failed to call OKX endpoint POST /api/v5/aigc/mcp/indicators.",
+  "suggestion": "Please check network connectivity and retry the request in a few seconds.",
+  "endpoint": "POST /api/v5/aigc/mcp/indicators",
+
+- **akilli_para** (❓): ORDI icin akilli para verisi yok.
+- **duygu** (❓): ORDI icin haber verisi yok.
+
+### ⏸️ 2026-09-12T19:42:51 — BTC-USDT — BEKLEDI
+
+- **teknik** (❓): Teknik veri alinamadi: market_get_indicator: {
+  "tool": "market_get_indicator",
+  "error": true,
+  "type": "NetworkError",
+  "message": "Failed to call OKX endpoint POST /api/v5/aigc/mcp/indicators.",
+  "suggestion": "Please check network connectivity and retry the request in a few seconds.",
+  "endpoint": "POST /api/v5/aigc/mcp/indicators",
+
+- **akilli_para** (❓): BTC icin akilli para verisi yok.
+- **duygu** (❓): BTC icin haber verisi yok.
+
+### ⏸️ 2026-09-12T19:42:51 — ETH-USDT — BEKLEDI
+
+- **teknik** (❓): Teknik veri alinamadi: market_get_indicator: {
+  "tool": "market_get_indicator",
+  "error": true,
+  "type": "NetworkError",
+  "message": "Failed to call OKX endpoint POST /api/v5/aigc/mcp/indicators.",
+  "suggestion": "Please check network connectivity and retry the request in a few seconds.",
+  "endpoint": "POST /api/v5/aigc/mcp/indicators",
+
+- **akilli_para** (❓): ETH icin akilli para verisi yok.
+- **duygu** (❓): ETH icin haber verisi yok.
+
+### ⏸️ 2026-09-12T19:42:51 — SOL-USDT — BEKLEDI
+
+- **teknik** (❓): Teknik veri alinamadi: market_get_indicator: {
+  "tool": "market_get_indicator",
+  "error": true,
+  "type": "NetworkError",
+  "message": "Failed to call OKX endpoint POST /api/v5/aigc/mcp/indicators.",
+  "suggestion": "Please check network connectivity and retry the request in a few seconds.",
+  "endpoint": "POST /api/v5/aigc/mcp/indicators",
+
+- **akilli_para** (❓): SOL icin akilli para verisi yok.
+- **duygu** (❓): SOL icin haber verisi yok.
+
+### ⏸️ 2026-09-12T19:42:51 — XRP-USDT — BEKLEDI
+
+- **teknik** (❓): Teknik veri alinamadi: market_get_indicator: {
+  "tool": "market_get_indicator",
+  "error": true,
+  "type": "NetworkError",
+  "message": "Failed to call OKX endpoint POST /api/v5/aigc/mcp/indicators.",
+  "suggestion": "Please check network connectivity and retry the request in a few seconds.",
+  "endpoint": "POST /api/v5/aigc/mcp/indicators",
+
+- **akilli_para** (❓): XRP icin akilli para verisi yok.
+- **duygu** (❓): XRP icin haber verisi yok.
+
+### ⏸️ 2026-09-12T19:42:51 — DOGE-USDT — BEKLEDI
+
+- **teknik** (❓): Teknik veri alinamadi: market_get_indicator: {
+  "tool": "market_get_indicator",
+  "error": true,
+  "type": "NetworkError",
+  "message": "Failed to call OKX endpoint POST /api/v5/aigc/mcp/indicators.",
+  "suggestion": "Please check network connectivity and retry the request in a few seconds.",
+  "endpoint": "POST /api/v5/aigc/mcp/indicators",
+
+- **akilli_para** (❓): DOGE icin akilli para verisi yok.
+- **duygu** (❓): DOGE icin haber verisi yok.
+
+### ⏸️ 2026-09-12T19:42:51 — ZEC-USDT — BEKLEDI
+
+- **teknik** (❓): Teknik veri alinamadi: market_get_indicator: {
+  "tool": "market_get_indicator",
+  "error": true,
+  "type": "NetworkError",
+  "message": "Failed to call OKX endpoint POST /api/v5/aigc/mcp/indicators.",
+  "suggestion": "Please check network connectivity and retry the request in a few seconds.",
+  "endpoint": "POST /api/v5/aigc/mcp/indicators",
+
+- **akilli_para** (❓): ZEC icin akilli para verisi yok.
+- **duygu** (❓): ZEC icin haber verisi yok.
+
+### ⏸️ 2026-09-12T19:42:51 — OKB-USDT — BEKLEDI
+
+- **teknik** (❓): Teknik veri alinamadi: market_get_indicator: {
+  "tool": "market_get_indicator",
+  "error": true,
+  "type": "NetworkError",
+  "message": "Failed to call OKX endpoint POST /api/v5/aigc/mcp/indicators.",
+  "suggestion": "Please check network connectivity and retry the request in a few seconds.",
+  "endpoint": "POST /api/v5/aigc/mcp/indicators",
+
+- **akilli_para** (❓): OKB icin akilli para verisi yok.
+- **duygu** (❓): OKB icin haber verisi yok.
+
+### ⏸️ 2026-09-12T19:42:52 — ORDI-USDT — BEKLEDI
+
+- **teknik** (❓): Teknik veri alinamadi: market_get_indicator: {
+  "tool": "market_get_indicator",
+  "error": true,
+  "type": "NetworkError",
+  "message": "Failed to call OKX endpoint POST /api/v5/aigc/mcp/indicators.",
+  "suggestion": "Please check network connectivity and retry the request in a few seconds.",
+  "endpoint": "POST /api/v5/aigc/mcp/indicators",
+
+- **akilli_para** (❓): ORDI icin akilli para verisi yok.
+- **duygu** (❓): ORDI icin haber verisi yok.
+
+### ⏸️ 2026-09-12T19:45:52 — BTC-USDT — BEKLEDI
+
+- **teknik** (❓): Teknik veri alinamadi: market_get_indicator: {
+  "tool": "market_get_indicator",
+  "error": true,
+  "type": "NetworkError",
+  "message": "Failed to call OKX endpoint POST /api/v5/aigc/mcp/indicators.",
+  "suggestion": "Please check network connectivity and retry the request in a few seconds.",
+  "endpoint": "POST /api/v5/aigc/mcp/indicators",
+
+- **akilli_para** (❓): BTC icin akilli para verisi yok.
+- **duygu** (❓): BTC icin haber verisi yok.
+
+### ⏸️ 2026-09-12T19:45:52 — ETH-USDT — BEKLEDI
+
+- **teknik** (❓): Teknik veri alinamadi: market_get_indicator: {
+  "tool": "market_get_indicator",
+  "error": true,
+  "type": "NetworkError",
+  "message": "Failed to call OKX endpoint POST /api/v5/aigc/mcp/indicators.",
+  "suggestion": "Please check network connectivity and retry the request in a few seconds.",
+  "endpoint": "POST /api/v5/aigc/mcp/indicators",
+
+- **akilli_para** (❓): ETH icin akilli para verisi yok.
+- **duygu** (❓): ETH icin haber verisi yok.
+
+### ⏸️ 2026-09-12T19:45:52 — SOL-USDT — BEKLEDI
+
+- **teknik** (❓): Teknik veri alinamadi: market_get_indicator: {
+  "tool": "market_get_indicator",
+  "error": true,
+  "type": "NetworkError",
+  "message": "Failed to call OKX endpoint POST /api/v5/aigc/mcp/indicators.",
+  "suggestion": "Please check network connectivity and retry the request in a few seconds.",
+  "endpoint": "POST /api/v5/aigc/mcp/indicators",
+
+- **akilli_para** (❓): SOL icin akilli para verisi yok.
+- **duygu** (❓): SOL icin haber verisi yok.
+
+### ⏸️ 2026-09-12T19:45:52 — XRP-USDT — BEKLEDI
+
+- **teknik** (❓): Teknik veri alinamadi: market_get_indicator: {
+  "tool": "market_get_indicator",
+  "error": true,
+  "type": "NetworkError",
+  "message": "Failed to call OKX endpoint POST /api/v5/aigc/mcp/indicators.",
+  "suggestion": "Please check network connectivity and retry the request in a few seconds.",
+  "endpoint": "POST /api/v5/aigc/mcp/indicators",
+
+- **akilli_para** (❓): XRP icin akilli para verisi yok.
+- **duygu** (❓): XRP icin haber verisi yok.
+
+### ⏸️ 2026-09-12T19:45:52 — DOGE-USDT — BEKLEDI
+
+- **teknik** (❓): Teknik veri alinamadi: market_get_indicator: {
+  "tool": "market_get_indicator",
+  "error": true,
+  "type": "NetworkError",
+  "message": "Failed to call OKX endpoint POST /api/v5/aigc/mcp/indicators.",
+  "suggestion": "Please check network connectivity and retry the request in a few seconds.",
+  "endpoint": "POST /api/v5/aigc/mcp/indicators",
+
+- **akilli_para** (❓): DOGE icin akilli para verisi yok.
+- **duygu** (❓): DOGE icin haber verisi yok.
+
+### ⏸️ 2026-09-12T19:45:52 — ZEC-USDT — BEKLEDI
+
+- **teknik** (❓): Teknik veri alinamadi: market_get_indicator: {
+  "tool": "market_get_indicator",
+  "error": true,
+  "type": "NetworkError",
+  "message": "Failed to call OKX endpoint POST /api/v5/aigc/mcp/indicators.",
+  "suggestion": "Please check network connectivity and retry the request in a few seconds.",
+  "endpoint": "POST /api/v5/aigc/mcp/indicators",
+
+- **akilli_para** (❓): ZEC icin akilli para verisi yok.
+- **duygu** (❓): ZEC icin haber verisi yok.
+
+### ⏸️ 2026-09-12T19:45:52 — OKB-USDT — BEKLEDI
+
+- **teknik** (❓): Teknik veri alinamadi: market_get_indicator: {
+  "tool": "market_get_indicator",
+  "error": true,
+  "type": "NetworkError",
+  "message": "Failed to call OKX endpoint POST /api/v5/aigc/mcp/indicators.",
+  "suggestion": "Please check network connectivity and retry the request in a few seconds.",
+  "endpoint": "POST /api/v5/aigc/mcp/indicators",
+
+- **akilli_para** (❓): OKB icin akilli para verisi yok.
+- **duygu** (❓): OKB icin haber verisi yok.
+
+### ⏸️ 2026-09-12T19:45:52 — ORDI-USDT — BEKLEDI
+
+- **teknik** (❓): Teknik veri alinamadi: market_get_indicator: {
+  "tool": "market_get_indicator",
+  "error": true,
+  "type": "NetworkError",
+  "message": "Failed to call OKX endpoint POST /api/v5/aigc/mcp/indicators.",
+  "suggestion": "Please check network connectivity and retry the request in a few seconds.",
+  "endpoint": "POST /api/v5/aigc/mcp/indicators",
+
+- **akilli_para** (❓): ORDI icin akilli para verisi yok.
+- **duygu** (❓): ORDI icin haber verisi yok.
+
+### ⏸️ 2026-09-12T19:48:52 — BTC-USDT — BEKLEDI
+
+- **teknik** (❓): Teknik veri alinamadi: market_get_indicator: {
+  "tool": "market_get_indicator",
+  "error": true,
+  "type": "NetworkError",
+  "message": "Failed to call OKX endpoint POST /api/v5/aigc/mcp/indicators.",
+  "suggestion": "Please check network connectivity and retry the request in a few seconds.",
+  "endpoint": "POST /api/v5/aigc/mcp/indicators",
+
+- **akilli_para** (❓): BTC icin akilli para verisi yok.
+- **duygu** (❓): BTC icin haber verisi yok.
+
+### ⏸️ 2026-09-12T19:48:52 — ETH-USDT — BEKLEDI
+
+- **teknik** (❓): Teknik veri alinamadi: market_get_indicator: {
+  "tool": "market_get_indicator",
+  "error": true,
+  "type": "NetworkError",
+  "message": "Failed to call OKX endpoint POST /api/v5/aigc/mcp/indicators.",
+  "suggestion": "Please check network connectivity and retry the request in a few seconds.",
+  "endpoint": "POST /api/v5/aigc/mcp/indicators",
+
+- **akilli_para** (❓): ETH icin akilli para verisi yok.
+- **duygu** (❓): ETH icin haber verisi yok.
+
+### ⏸️ 2026-09-12T19:48:52 — SOL-USDT — BEKLEDI
+
+- **teknik** (❓): Teknik veri alinamadi: market_get_indicator: {
+  "tool": "market_get_indicator",
+  "error": true,
+  "type": "NetworkError",
+  "message": "Failed to call OKX endpoint POST /api/v5/aigc/mcp/indicators.",
+  "suggestion": "Please check network connectivity and retry the request in a few seconds.",
+  "endpoint": "POST /api/v5/aigc/mcp/indicators",
+
+- **akilli_para** (❓): SOL icin akilli para verisi yok.
+- **duygu** (❓): SOL icin haber verisi yok.
+
+### ⏸️ 2026-09-12T19:48:52 — XRP-USDT — BEKLEDI
+
+- **teknik** (❓): Teknik veri alinamadi: market_get_indicator: {
+  "tool": "market_get_indicator",
+  "error": true,
+  "type": "NetworkError",
+  "message": "Failed to call OKX endpoint POST /api/v5/aigc/mcp/indicators.",
+  "suggestion": "Please check network connectivity and retry the request in a few seconds.",
+  "endpoint": "POST /api/v5/aigc/mcp/indicators",
+
+- **akilli_para** (❓): XRP icin akilli para verisi yok.
+- **duygu** (❓): XRP icin haber verisi yok.
+
+### ⏸️ 2026-09-12T19:48:52 — DOGE-USDT — BEKLEDI
+
+- **teknik** (❓): Teknik veri alinamadi: market_get_indicator: {
+  "tool": "market_get_indicator",
+  "error": true,
+  "type": "NetworkError",
+  "message": "Failed to call OKX endpoint POST /api/v5/aigc/mcp/indicators.",
+  "suggestion": "Please check network connectivity and retry the request in a few seconds.",
+  "endpoint": "POST /api/v5/aigc/mcp/indicators",
+
+- **akilli_para** (❓): DOGE icin akilli para verisi yok.
+- **duygu** (❓): DOGE icin haber verisi yok.
+
+### ⏸️ 2026-09-12T19:48:52 — ZEC-USDT — BEKLEDI
+
+- **teknik** (❓): Teknik veri alinamadi: market_get_indicator: {
+  "tool": "market_get_indicator",
+  "error": true,
+  "type": "NetworkError",
+  "message": "Failed to call OKX endpoint POST /api/v5/aigc/mcp/indicators.",
+  "suggestion": "Please check network connectivity and retry the request in a few seconds.",
+  "endpoint": "POST /api/v5/aigc/mcp/indicators",
+
+- **akilli_para** (❓): ZEC icin akilli para verisi yok.
+- **duygu** (❓): ZEC icin haber verisi yok.
+
+### ⏸️ 2026-09-12T19:48:53 — OKB-USDT — BEKLEDI
+
+- **teknik** (❓): Teknik veri alinamadi: market_get_indicator: {
+  "tool": "market_get_indicator",
+  "error": true,
+  "type": "NetworkError",
+  "message": "Failed to call OKX endpoint POST /api/v5/aigc/mcp/indicators.",
+  "suggestion": "Please check network connectivity and retry the request in a few seconds.",
+  "endpoint": "POST /api/v5/aigc/mcp/indicators",
+
+- **akilli_para** (❓): OKB icin akilli para verisi yok.
+- **duygu** (❓): OKB icin haber verisi yok.
+
+### ⏸️ 2026-09-12T19:48:53 — ORDI-USDT — BEKLEDI
+
+- **teknik** (❓): Teknik veri alinamadi: market_get_indicator: {
+  "tool": "market_get_indicator",
+  "error": true,
+  "type": "NetworkError",
+  "message": "Failed to call OKX endpoint POST /api/v5/aigc/mcp/indicators.",
+  "suggestion": "Please check network connectivity and retry the request in a few seconds.",
+  "endpoint": "POST /api/v5/aigc/mcp/indicators",
+
+- **akilli_para** (❓): ORDI icin akilli para verisi yok.
+- **duygu** (❓): ORDI icin haber verisi yok.
+
+### 🔴 2026-09-12T19:51:55 — ETH-USDT — SATIM
+
+
+> ⛔ **Risk kapisi durdurdu:** Zaman stopu: pozisyon 22 dakikadir acik — limit 8 dk. Ajan pozisyonu kendisi kapatti.
+
+### 🔴 2026-09-12T19:51:57 — SOL-USDT — SATIM
+
+
+> ⛔ **Risk kapisi durdurdu:** Zaman stopu: pozisyon 21 dakikadir acik — limit 8 dk. Ajan pozisyonu kendisi kapatti.
+
+### 🔴 2026-09-12T19:51:58 — XRP-USDT — SATIM
+
+
+> ⛔ **Risk kapisi durdurdu:** Zaman stopu: pozisyon 21 dakikadir acik — limit 8 dk. Ajan pozisyonu kendisi kapatti.
+
+### ⏸️ 2026-09-12T19:52:01 — BTC-USDT — BEKLEDI
+
+- **teknik** (🔴): RSI 77.0 (asiri alim) ve fiyat EMA20 altinda.
+- **akilli_para** (🟢): Basarili traderlarin %82'i alis yonunde (18 alici / 12 satici).
+- **duygu** (⏸️): Haber havasi notr (pozitif 0.36 / negatif 0.24, 1387 haber).
+
+### 🟢 2026-09-12T19:52:05 — ETH-USDT — ALIM
+
+- **teknik** (⏸️): RSI 41.2 notr bolgede, fiyat EMA20'in altinda.
+- **akilli_para** (🟢): Basarili traderlarin %92'i alis yonunde (27 alici / 13 satici).
+- **duygu** (🟢): Haber akisi olumlu (pozitif 0.47 / negatif 0.12, 761 haber).
+
+> Emir: 2.4 ETH-USDT · kar-al 2551.38912 · zarar-kes 2518.4843 · id `agent1789231923`
+
+### 🟢 2026-09-12T19:52:09 — SOL-USDT — ALIM
+
+- **teknik** (⏸️): RSI 51.3 notr bolgede, fiyat EMA20'in ustunde.
+- **akilli_para** (🟢): Basarili traderlarin %91'i alis yonunde (10 alici / 2 satici).
+- **duygu** (🟢): Haber akisi olumlu (pozitif 0.57 / negatif 0.09, 878 haber).
+
+> Emir: 2.4 SOL-USDT · kar-al 102.84624 · zarar-kes 101.51985 · id `agent1789231927`
+
+### 🟢 2026-09-12T19:52:13 — XRP-USDT — ALIM
+
+- **teknik** (⏸️): RSI 50.3 notr bolgede, fiyat EMA20'in altinda.
+- **akilli_para** (🟢): Basarili traderlarin %100'i alis yonunde (6 alici / 2 satici).
+- **duygu** (🟢): Haber akisi olumlu (pozitif 0.56 / negatif 0.11, 81 haber).
+
+> Emir: 2.4 XRP-USDT · kar-al 1.381162 · zarar-kes 1.363349 · id `agent1789231931`
+
+### ⏸️ 2026-09-12T19:52:14 — DOGE-USDT — BEKLEDI
+
+- **teknik** (⏸️): RSI 49.7 notr bolgede, fiyat EMA20'in altinda.
+- **akilli_para** (🟢): Basarili traderlarin %98'i alis yonunde (8 alici / 2 satici).
+- **duygu** (🔴): Haber akisi olumsuz (negatif 0.45 / pozitif 0.32, 74 haber).
+
+### ⛔ 2026-09-12T19:52:16 — ZEC-USDT — RISK KAPISI ENGELLEDI
+
+- **teknik** (🟢): RSI 0.0 (asiri satim) ve fiyat EMA20 uzerinde.
+- **akilli_para** (⏸️): Basarili traderlar bolunmus durumda (%42 alis). Net yon yok.
+- **duygu** (🟢): Haber akisi olumlu (pozitif 0.46 / negatif 0.21, 194 haber).
+
+> ⛔ **Risk kapisi durdurdu:** Pozisyon buyuklugu (2.40) borsanin minimum emir tutarinin (11.41) altinda.
+
+### ⛔ 2026-09-12T19:52:17 — OKB-USDT — RISK KAPISI ENGELLEDI
+
+- **teknik** (⏸️): RSI 28.8 notr bolgede, fiyat EMA20'in altinda.
+- **akilli_para** (🟢): Basarili traderlarin %100'i alis yonunde (6 alici / 0 satici).
+- **duygu** (🟢): Haber akisi olumlu (pozitif 0.50 / negatif 0.00, 10 haber).
+
+> ⛔ **Risk kapisi durdurdu:** OKB-USDT: bu paritede borsa koruma emri olusturmuyor, stop-loss'suz islem yapilmaz. Oturum boyunca kapali.
+
+### ⛔ 2026-09-12T19:52:19 — ORDI-USDT — RISK KAPISI ENGELLEDI
+
+- **teknik** (❓): Gosterge verisi bos dondu.
+- **akilli_para** (🟢): Basarili traderlarin %100'i alis yonunde (4 alici / 0 satici).
+- **duygu** (🟢): Haber akisi olumlu (pozitif 1.00 / negatif 0.00, 1 haber).
+
+> ⛔ **Risk kapisi durdurdu:** ORDI-USDT: bu paritede borsa koruma emri olusturmuyor, stop-loss'suz islem yapilmaz. Oturum boyunca kapali.
+
+### ⏸️ 2026-09-12T19:55:23 — BTC-USDT — BEKLEDI
+
+- **teknik** (🔴): RSI 72.6 (asiri alim) ve fiyat EMA20 altinda.
+- **akilli_para** (🟢): Basarili traderlarin %82'i alis yonunde (18 alici / 12 satici).
+- **duygu** (⏸️): Haber havasi notr (pozitif 0.36 / negatif 0.24, 1387 haber).
+
+### ⛔ 2026-09-12T19:55:24 — ETH-USDT — RISK KAPISI ENGELLEDI
+
+- **teknik** (⏸️): RSI 43.1 notr bolgede, fiyat EMA20'in altinda.
+- **akilli_para** (🟢): Basarili traderlarin %92'i alis yonunde (27 alici / 13 satici).
+- **duygu** (🟢): Haber akisi olumlu (pozitif 0.47 / negatif 0.12, 761 haber).
+
+> ⛔ **Risk kapisi durdurdu:** ETH-USDT icin borsada zaten acik bir pozisyon var; ayni pariteye ikinci kez girilmez.
+
+### ⛔ 2026-09-12T19:55:26 — SOL-USDT — RISK KAPISI ENGELLEDI
+
+- **teknik** (⏸️): RSI 54.5 notr bolgede, fiyat EMA20'in ustunde.
+- **akilli_para** (🟢): Basarili traderlarin %91'i alis yonunde (10 alici / 2 satici).
+- **duygu** (🟢): Haber akisi olumlu (pozitif 0.57 / negatif 0.09, 878 haber).
+
+> ⛔ **Risk kapisi durdurdu:** SOL-USDT icin borsada zaten acik bir pozisyon var; ayni pariteye ikinci kez girilmez.
+
+### ⛔ 2026-09-12T19:55:27 — XRP-USDT — RISK KAPISI ENGELLEDI
+
+- **teknik** (⏸️): RSI 50.3 notr bolgede, fiyat EMA20'in altinda.
+- **akilli_para** (🟢): Basarili traderlarin %100'i alis yonunde (6 alici / 2 satici).
+- **duygu** (🟢): Haber akisi olumlu (pozitif 0.56 / negatif 0.11, 81 haber).
+
+> ⛔ **Risk kapisi durdurdu:** XRP-USDT icin borsada zaten acik bir pozisyon var; ayni pariteye ikinci kez girilmez.
+
+### ⏸️ 2026-09-12T19:55:28 — DOGE-USDT — BEKLEDI
+
+- **teknik** (⏸️): RSI 54.6 notr bolgede, fiyat EMA20'in ustunde.
+- **akilli_para** (🟢): Basarili traderlarin %98'i alis yonunde (8 alici / 2 satici).
+- **duygu** (🔴): Haber akisi olumsuz (negatif 0.45 / pozitif 0.32, 74 haber).
+
+### ⛔ 2026-09-12T19:55:29 — ZEC-USDT — RISK KAPISI ENGELLEDI
+
+- **teknik** (🟢): RSI 0.0 (asiri satim) ve fiyat EMA20 uzerinde.
+- **akilli_para** (⏸️): Basarili traderlar bolunmus durumda (%42 alis). Net yon yok.
+- **duygu** (🟢): Haber akisi olumlu (pozitif 0.46 / negatif 0.21, 194 haber).
+
+> ⛔ **Risk kapisi durdurdu:** Pozisyon buyuklugu (1.68) borsanin minimum emir tutarinin (11.42) altinda.
+
+### ⛔ 2026-09-12T19:55:31 — OKB-USDT — RISK KAPISI ENGELLEDI
+
+- **teknik** (⏸️): RSI 30.2 notr bolgede, fiyat EMA20'in altinda.
+- **akilli_para** (🟢): Basarili traderlarin %100'i alis yonunde (6 alici / 0 satici).
+- **duygu** (🟢): Haber akisi olumlu (pozitif 0.50 / negatif 0.00, 10 haber).
+
+> ⛔ **Risk kapisi durdurdu:** OKB-USDT: bu paritede borsa koruma emri olusturmuyor, stop-loss'suz islem yapilmaz. Oturum boyunca kapali.
+
+### ⛔ 2026-09-12T19:55:32 — ORDI-USDT — RISK KAPISI ENGELLEDI
+
+- **teknik** (❓): Gosterge verisi bos dondu.
+- **akilli_para** (🟢): Basarili traderlarin %100'i alis yonunde (4 alici / 0 satici).
+- **duygu** (🟢): Haber akisi olumlu (pozitif 1.00 / negatif 0.00, 1 haber).
+
+> ⛔ **Risk kapisi durdurdu:** ORDI-USDT: bu paritede borsa koruma emri olusturmuyor, stop-loss'suz islem yapilmaz. Oturum boyunca kapali.
+

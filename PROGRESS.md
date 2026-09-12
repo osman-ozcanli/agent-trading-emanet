@@ -39,6 +39,10 @@ eklendi (`state.json` / `state.live.json`), yanlış kilit kaldırıldı, o turu
 **Hata 9 — teknik tanık bozuk veriye "alış" diyordu** (ZEC: RSI 0.0, EMA 400, fiyat 1140). Artık
 `0<RSI<100` ve EMA/fiyat oranı 0,5–2 dışında "unknown".
 
+**Hata 8'in artçısı (19:00–19:27, demo).** 18:59'daki yanlış Safe Mode kilidi 19:00'da kaldırıldı ama demo ajan
+o sırada turun ortasındaydı ve tur sonunda eski durumu geri yazdı. Demo 27 dakika "Safe Mode aktif" diye reddetti;
+bu kayıtlar gerçek kayıp değil, hata 8'in kalıntısı. 19:28'de kilit yeniden kaldırıldı, kayıtlar silinmedi.
+
 `agent.py --config` bayrağı eklendi; demo ve canlı yan yana kendi dosyalarından çalışır.
 
 ## KALAN İŞ — 18:38 itibarıyla
