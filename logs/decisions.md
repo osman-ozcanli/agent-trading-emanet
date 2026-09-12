@@ -2181,3 +2181,363 @@
 
 > ⛔ **Risk kapisi durdurdu:** ORDI-USDT: bu paritede borsa koruma emri olusturmuyor, stop-loss'suz islem yapilmaz. Oturum boyunca kapali.
 
+### ⏸️ 2026-09-12T19:07:21 — BTC-USDT — BEKLEDI
+
+- **teknik** (🔴): RSI 73.4 (asiri alim) ve fiyat EMA20 altinda.
+- **akilli_para** (🟢): Basarili traderlarin %82'i alis yonunde (18 alici / 12 satici).
+- **duygu** (⏸️): Haber havasi notr (pozitif 0.36 / negatif 0.24, 1387 haber).
+
+### ⛔ 2026-09-12T19:07:23 — ETH-USDT — RISK KAPISI ENGELLEDI
+
+- **teknik** (⏸️): RSI 45.5 notr bolgede, fiyat EMA20'in altinda.
+- **akilli_para** (🟢): Basarili traderlarin %92'i alis yonunde (27 alici / 13 satici).
+- **duygu** (🟢): Haber akisi olumlu (pozitif 0.47 / negatif 0.12, 761 haber).
+
+> ⛔ **Risk kapisi durdurdu:** Safe Mode aktif — gunluk kayip limiti asilmisti, yeni islem yok.
+
+### ⛔ 2026-09-12T19:07:25 — SOL-USDT — RISK KAPISI ENGELLEDI
+
+- **teknik** (⏸️): RSI 49.2 notr bolgede, fiyat EMA20'in altinda.
+- **akilli_para** (🟢): Basarili traderlarin %91'i alis yonunde (10 alici / 2 satici).
+- **duygu** (🟢): Haber akisi olumlu (pozitif 0.57 / negatif 0.09, 878 haber).
+
+> ⛔ **Risk kapisi durdurdu:** Safe Mode aktif — gunluk kayip limiti asilmisti, yeni islem yok.
+
+### ⛔ 2026-09-12T19:07:27 — XRP-USDT — RISK KAPISI ENGELLEDI
+
+- **teknik** (⏸️): RSI 52.9 notr bolgede, fiyat EMA20'in ustunde.
+- **akilli_para** (🟢): Basarili traderlarin %100'i alis yonunde (6 alici / 2 satici).
+- **duygu** (🟢): Haber akisi olumlu (pozitif 0.56 / negatif 0.11, 81 haber).
+
+> ⛔ **Risk kapisi durdurdu:** Safe Mode aktif — gunluk kayip limiti asilmisti, yeni islem yok.
+
+### ⏸️ 2026-09-12T19:07:28 — DOGE-USDT — BEKLEDI
+
+- **teknik** (⏸️): RSI 52.4 notr bolgede, fiyat EMA20'in altinda.
+- **akilli_para** (🟢): Basarili traderlarin %98'i alis yonunde (8 alici / 2 satici).
+- **duygu** (🔴): Haber akisi olumsuz (negatif 0.45 / pozitif 0.32, 74 haber).
+
+### ⛔ 2026-09-12T19:07:31 — ZEC-USDT — RISK KAPISI ENGELLEDI
+
+- **teknik** (🟢): RSI 0.0 (asiri satim) ve fiyat EMA20 uzerinde.
+- **akilli_para** (⏸️): Basarili traderlar bolunmus durumda (%42 alis). Net yon yok.
+- **duygu** (🟢): Haber akisi olumlu (pozitif 0.46 / negatif 0.21, 194 haber).
+
+> ⛔ **Risk kapisi durdurdu:** Safe Mode aktif — gunluk kayip limiti asilmisti, yeni islem yok.
+
+### ⛔ 2026-09-12T19:07:32 — OKB-USDT — RISK KAPISI ENGELLEDI
+
+- **teknik** (⏸️): RSI 43.7 notr bolgede, fiyat EMA20'in altinda.
+- **akilli_para** (🟢): Basarili traderlarin %100'i alis yonunde (6 alici / 0 satici).
+- **duygu** (🟢): Haber akisi olumlu (pozitif 0.50 / negatif 0.00, 10 haber).
+
+> ⛔ **Risk kapisi durdurdu:** OKB-USDT: bu paritede borsa koruma emri olusturmuyor, stop-loss'suz islem yapilmaz. Oturum boyunca kapali.
+
+### ⛔ 2026-09-12T19:07:33 — ORDI-USDT — RISK KAPISI ENGELLEDI
+
+- **teknik** (❓): Gosterge verisi bos dondu.
+- **akilli_para** (🟢): Basarili traderlarin %100'i alis yonunde (4 alici / 0 satici).
+- **duygu** (🟢): Haber akisi olumlu (pozitif 1.00 / negatif 0.00, 1 haber).
+
+> ⛔ **Risk kapisi durdurdu:** ORDI-USDT: bu paritede borsa koruma emri olusturmuyor, stop-loss'suz islem yapilmaz. Oturum boyunca kapali.
+
+### ⏸️ 2026-09-12T19:10:37 — BTC-USDT — BEKLEDI
+
+- **teknik** (🔴): RSI 73.4 (asiri alim) ve fiyat EMA20 altinda.
+- **akilli_para** (🟢): Basarili traderlarin %82'i alis yonunde (18 alici / 12 satici).
+- **duygu** (⏸️): Haber havasi notr (pozitif 0.36 / negatif 0.24, 1387 haber).
+
+### ⛔ 2026-09-12T19:10:39 — ETH-USDT — RISK KAPISI ENGELLEDI
+
+- **teknik** (⏸️): RSI 46.3 notr bolgede, fiyat EMA20'in altinda.
+- **akilli_para** (🟢): Basarili traderlarin %92'i alis yonunde (27 alici / 13 satici).
+- **duygu** (🟢): Haber akisi olumlu (pozitif 0.47 / negatif 0.12, 761 haber).
+
+> ⛔ **Risk kapisi durdurdu:** Safe Mode aktif — gunluk kayip limiti asilmisti, yeni islem yok.
+
+### ⛔ 2026-09-12T19:10:41 — SOL-USDT — RISK KAPISI ENGELLEDI
+
+- **teknik** (⏸️): RSI 54.2 notr bolgede, fiyat EMA20'in ustunde.
+- **akilli_para** (🟢): Basarili traderlarin %91'i alis yonunde (10 alici / 2 satici).
+- **duygu** (🟢): Haber akisi olumlu (pozitif 0.57 / negatif 0.09, 878 haber).
+
+> ⛔ **Risk kapisi durdurdu:** Safe Mode aktif — gunluk kayip limiti asilmisti, yeni islem yok.
+
+### ⛔ 2026-09-12T19:10:43 — XRP-USDT — RISK KAPISI ENGELLEDI
+
+- **teknik** (⏸️): RSI 53.8 notr bolgede, fiyat EMA20'in ustunde.
+- **akilli_para** (🟢): Basarili traderlarin %100'i alis yonunde (6 alici / 2 satici).
+- **duygu** (🟢): Haber akisi olumlu (pozitif 0.56 / negatif 0.11, 81 haber).
+
+> ⛔ **Risk kapisi durdurdu:** Safe Mode aktif — gunluk kayip limiti asilmisti, yeni islem yok.
+
+### ⏸️ 2026-09-12T19:10:45 — DOGE-USDT — BEKLEDI
+
+- **teknik** (⏸️): RSI 52.4 notr bolgede, fiyat EMA20'in altinda.
+- **akilli_para** (🟢): Basarili traderlarin %98'i alis yonunde (8 alici / 2 satici).
+- **duygu** (🔴): Haber akisi olumsuz (negatif 0.45 / pozitif 0.32, 74 haber).
+
+### ⛔ 2026-09-12T19:10:47 — ZEC-USDT — RISK KAPISI ENGELLEDI
+
+- **teknik** (🟢): RSI 0.0 (asiri satim) ve fiyat EMA20 uzerinde.
+- **akilli_para** (⏸️): Basarili traderlar bolunmus durumda (%42 alis). Net yon yok.
+- **duygu** (🟢): Haber akisi olumlu (pozitif 0.46 / negatif 0.21, 194 haber).
+
+> ⛔ **Risk kapisi durdurdu:** Safe Mode aktif — gunluk kayip limiti asilmisti, yeni islem yok.
+
+### ⛔ 2026-09-12T19:10:48 — OKB-USDT — RISK KAPISI ENGELLEDI
+
+- **teknik** (⏸️): RSI 39.1 notr bolgede, fiyat EMA20'in altinda.
+- **akilli_para** (🟢): Basarili traderlarin %100'i alis yonunde (6 alici / 0 satici).
+- **duygu** (🟢): Haber akisi olumlu (pozitif 0.50 / negatif 0.00, 10 haber).
+
+> ⛔ **Risk kapisi durdurdu:** OKB-USDT: bu paritede borsa koruma emri olusturmuyor, stop-loss'suz islem yapilmaz. Oturum boyunca kapali.
+
+### ⛔ 2026-09-12T19:10:50 — ORDI-USDT — RISK KAPISI ENGELLEDI
+
+- **teknik** (❓): Gosterge verisi bos dondu.
+- **akilli_para** (🟢): Basarili traderlarin %100'i alis yonunde (4 alici / 0 satici).
+- **duygu** (🟢): Haber akisi olumlu (pozitif 1.00 / negatif 0.00, 1 haber).
+
+> ⛔ **Risk kapisi durdurdu:** ORDI-USDT: bu paritede borsa koruma emri olusturmuyor, stop-loss'suz islem yapilmaz. Oturum boyunca kapali.
+
+### ⏸️ 2026-09-12T19:13:53 — BTC-USDT — BEKLEDI
+
+- **teknik** (🔴): RSI 73.9 (asiri alim) ve fiyat EMA20 altinda.
+- **akilli_para** (🟢): Basarili traderlarin %82'i alis yonunde (18 alici / 12 satici).
+- **duygu** (⏸️): Haber havasi notr (pozitif 0.36 / negatif 0.24, 1387 haber).
+
+### ⛔ 2026-09-12T19:13:55 — ETH-USDT — RISK KAPISI ENGELLEDI
+
+- **teknik** (⏸️): RSI 48.8 notr bolgede, fiyat EMA20'in altinda.
+- **akilli_para** (🟢): Basarili traderlarin %92'i alis yonunde (27 alici / 13 satici).
+- **duygu** (🟢): Haber akisi olumlu (pozitif 0.47 / negatif 0.12, 761 haber).
+
+> ⛔ **Risk kapisi durdurdu:** Safe Mode aktif — gunluk kayip limiti asilmisti, yeni islem yok.
+
+### ⛔ 2026-09-12T19:13:57 — SOL-USDT — RISK KAPISI ENGELLEDI
+
+- **teknik** (⏸️): RSI 54.2 notr bolgede, fiyat EMA20'in ustunde.
+- **akilli_para** (🟢): Basarili traderlarin %91'i alis yonunde (10 alici / 2 satici).
+- **duygu** (🟢): Haber akisi olumlu (pozitif 0.57 / negatif 0.09, 878 haber).
+
+> ⛔ **Risk kapisi durdurdu:** Safe Mode aktif — gunluk kayip limiti asilmisti, yeni islem yok.
+
+### ⛔ 2026-09-12T19:13:59 — XRP-USDT — RISK KAPISI ENGELLEDI
+
+- **teknik** (⏸️): RSI 53.8 notr bolgede, fiyat EMA20'in ustunde.
+- **akilli_para** (🟢): Basarili traderlarin %100'i alis yonunde (6 alici / 2 satici).
+- **duygu** (🟢): Haber akisi olumlu (pozitif 0.56 / negatif 0.11, 81 haber).
+
+> ⛔ **Risk kapisi durdurdu:** Safe Mode aktif — gunluk kayip limiti asilmisti, yeni islem yok.
+
+### ⏸️ 2026-09-12T19:14:00 — DOGE-USDT — BEKLEDI
+
+- **teknik** (⏸️): RSI 52.4 notr bolgede, fiyat EMA20'in ustunde.
+- **akilli_para** (🟢): Basarili traderlarin %98'i alis yonunde (8 alici / 2 satici).
+- **duygu** (🔴): Haber akisi olumsuz (negatif 0.45 / pozitif 0.32, 74 haber).
+
+### ⛔ 2026-09-12T19:14:02 — ZEC-USDT — RISK KAPISI ENGELLEDI
+
+- **teknik** (🟢): RSI 0.0 (asiri satim) ve fiyat EMA20 uzerinde.
+- **akilli_para** (⏸️): Basarili traderlar bolunmus durumda (%42 alis). Net yon yok.
+- **duygu** (🟢): Haber akisi olumlu (pozitif 0.46 / negatif 0.21, 194 haber).
+
+> ⛔ **Risk kapisi durdurdu:** Safe Mode aktif — gunluk kayip limiti asilmisti, yeni islem yok.
+
+### ⛔ 2026-09-12T19:14:03 — OKB-USDT — RISK KAPISI ENGELLEDI
+
+- **teknik** (⏸️): RSI 37.0 notr bolgede, fiyat EMA20'in altinda.
+- **akilli_para** (🟢): Basarili traderlarin %100'i alis yonunde (6 alici / 0 satici).
+- **duygu** (🟢): Haber akisi olumlu (pozitif 0.50 / negatif 0.00, 10 haber).
+
+> ⛔ **Risk kapisi durdurdu:** OKB-USDT: bu paritede borsa koruma emri olusturmuyor, stop-loss'suz islem yapilmaz. Oturum boyunca kapali.
+
+### ⛔ 2026-09-12T19:14:05 — ORDI-USDT — RISK KAPISI ENGELLEDI
+
+- **teknik** (❓): Gosterge verisi bos dondu.
+- **akilli_para** (🟢): Basarili traderlarin %100'i alis yonunde (4 alici / 0 satici).
+- **duygu** (🟢): Haber akisi olumlu (pozitif 1.00 / negatif 0.00, 1 haber).
+
+> ⛔ **Risk kapisi durdurdu:** ORDI-USDT: bu paritede borsa koruma emri olusturmuyor, stop-loss'suz islem yapilmaz. Oturum boyunca kapali.
+
+### ⏸️ 2026-09-12T19:17:08 — BTC-USDT — BEKLEDI
+
+- **teknik** (🔴): RSI 73.0 (asiri alim) ve fiyat EMA20 altinda.
+- **akilli_para** (🟢): Basarili traderlarin %82'i alis yonunde (18 alici / 12 satici).
+- **duygu** (⏸️): Haber havasi notr (pozitif 0.36 / negatif 0.24, 1387 haber).
+
+### ⛔ 2026-09-12T19:17:10 — ETH-USDT — RISK KAPISI ENGELLEDI
+
+- **teknik** (⏸️): RSI 49.4 notr bolgede, fiyat EMA20'in altinda.
+- **akilli_para** (🟢): Basarili traderlarin %92'i alis yonunde (27 alici / 13 satici).
+- **duygu** (🟢): Haber akisi olumlu (pozitif 0.47 / negatif 0.12, 761 haber).
+
+> ⛔ **Risk kapisi durdurdu:** Safe Mode aktif — gunluk kayip limiti asilmisti, yeni islem yok.
+
+### ⛔ 2026-09-12T19:17:12 — SOL-USDT — RISK KAPISI ENGELLEDI
+
+- **teknik** (⏸️): RSI 52.7 notr bolgede, fiyat EMA20'in ustunde.
+- **akilli_para** (🟢): Basarili traderlarin %91'i alis yonunde (10 alici / 2 satici).
+- **duygu** (🟢): Haber akisi olumlu (pozitif 0.57 / negatif 0.09, 878 haber).
+
+> ⛔ **Risk kapisi durdurdu:** Safe Mode aktif — gunluk kayip limiti asilmisti, yeni islem yok.
+
+### ⛔ 2026-09-12T19:17:13 — XRP-USDT — RISK KAPISI ENGELLEDI
+
+- **teknik** (⏸️): RSI 53.9 notr bolgede, fiyat EMA20'in ustunde.
+- **akilli_para** (🟢): Basarili traderlarin %100'i alis yonunde (6 alici / 2 satici).
+- **duygu** (🟢): Haber akisi olumlu (pozitif 0.56 / negatif 0.11, 81 haber).
+
+> ⛔ **Risk kapisi durdurdu:** Safe Mode aktif — gunluk kayip limiti asilmisti, yeni islem yok.
+
+### ⏸️ 2026-09-12T19:17:15 — DOGE-USDT — BEKLEDI
+
+- **teknik** (⏸️): RSI 52.3 notr bolgede, fiyat EMA20'in altinda.
+- **akilli_para** (🟢): Basarili traderlarin %98'i alis yonunde (8 alici / 2 satici).
+- **duygu** (🔴): Haber akisi olumsuz (negatif 0.45 / pozitif 0.32, 74 haber).
+
+### ⛔ 2026-09-12T19:17:16 — ZEC-USDT — RISK KAPISI ENGELLEDI
+
+- **teknik** (🟢): RSI 0.0 (asiri satim) ve fiyat EMA20 uzerinde.
+- **akilli_para** (⏸️): Basarili traderlar bolunmus durumda (%42 alis). Net yon yok.
+- **duygu** (🟢): Haber akisi olumlu (pozitif 0.46 / negatif 0.21, 194 haber).
+
+> ⛔ **Risk kapisi durdurdu:** Safe Mode aktif — gunluk kayip limiti asilmisti, yeni islem yok.
+
+### ⛔ 2026-09-12T19:17:18 — OKB-USDT — RISK KAPISI ENGELLEDI
+
+- **teknik** (⏸️): RSI 35.6 notr bolgede, fiyat EMA20'in altinda.
+- **akilli_para** (🟢): Basarili traderlarin %100'i alis yonunde (6 alici / 0 satici).
+- **duygu** (🟢): Haber akisi olumlu (pozitif 0.50 / negatif 0.00, 10 haber).
+
+> ⛔ **Risk kapisi durdurdu:** OKB-USDT: bu paritede borsa koruma emri olusturmuyor, stop-loss'suz islem yapilmaz. Oturum boyunca kapali.
+
+### ⛔ 2026-09-12T19:17:19 — ORDI-USDT — RISK KAPISI ENGELLEDI
+
+- **teknik** (❓): Gosterge verisi bos dondu.
+- **akilli_para** (🟢): Basarili traderlarin %100'i alis yonunde (4 alici / 0 satici).
+- **duygu** (🟢): Haber akisi olumlu (pozitif 1.00 / negatif 0.00, 1 haber).
+
+> ⛔ **Risk kapisi durdurdu:** ORDI-USDT: bu paritede borsa koruma emri olusturmuyor, stop-loss'suz islem yapilmaz. Oturum boyunca kapali.
+
+### ⏸️ 2026-09-12T19:20:23 — BTC-USDT — BEKLEDI
+
+- **teknik** (🔴): RSI 74.0 (asiri alim) ve fiyat EMA20 altinda.
+- **akilli_para** (🟢): Basarili traderlarin %82'i alis yonunde (18 alici / 12 satici).
+- **duygu** (⏸️): Haber havasi notr (pozitif 0.36 / negatif 0.24, 1387 haber).
+
+### ⛔ 2026-09-12T19:20:25 — ETH-USDT — RISK KAPISI ENGELLEDI
+
+- **teknik** (⏸️): RSI 47.1 notr bolgede, fiyat EMA20'in altinda.
+- **akilli_para** (🟢): Basarili traderlarin %92'i alis yonunde (27 alici / 13 satici).
+- **duygu** (🟢): Haber akisi olumlu (pozitif 0.47 / negatif 0.12, 761 haber).
+
+> ⛔ **Risk kapisi durdurdu:** Safe Mode aktif — gunluk kayip limiti asilmisti, yeni islem yok.
+
+### ⛔ 2026-09-12T19:20:27 — SOL-USDT — RISK KAPISI ENGELLEDI
+
+- **teknik** (⏸️): RSI 52.7 notr bolgede, fiyat EMA20'in altinda.
+- **akilli_para** (🟢): Basarili traderlarin %91'i alis yonunde (10 alici / 2 satici).
+- **duygu** (🟢): Haber akisi olumlu (pozitif 0.57 / negatif 0.09, 878 haber).
+
+> ⛔ **Risk kapisi durdurdu:** Safe Mode aktif — gunluk kayip limiti asilmisti, yeni islem yok.
+
+### ⛔ 2026-09-12T19:20:29 — XRP-USDT — RISK KAPISI ENGELLEDI
+
+- **teknik** (⏸️): RSI 53.5 notr bolgede, fiyat EMA20'in ustunde.
+- **akilli_para** (🟢): Basarili traderlarin %100'i alis yonunde (6 alici / 2 satici).
+- **duygu** (🟢): Haber akisi olumlu (pozitif 0.56 / negatif 0.11, 81 haber).
+
+> ⛔ **Risk kapisi durdurdu:** Safe Mode aktif — gunluk kayip limiti asilmisti, yeni islem yok.
+
+### ⏸️ 2026-09-12T19:20:30 — DOGE-USDT — BEKLEDI
+
+- **teknik** (⏸️): RSI 52.3 notr bolgede, fiyat EMA20'in altinda.
+- **akilli_para** (🟢): Basarili traderlarin %98'i alis yonunde (8 alici / 2 satici).
+- **duygu** (🔴): Haber akisi olumsuz (negatif 0.45 / pozitif 0.32, 74 haber).
+
+### ⛔ 2026-09-12T19:20:32 — ZEC-USDT — RISK KAPISI ENGELLEDI
+
+- **teknik** (🟢): RSI 0.0 (asiri satim) ve fiyat EMA20 uzerinde.
+- **akilli_para** (⏸️): Basarili traderlar bolunmus durumda (%42 alis). Net yon yok.
+- **duygu** (🟢): Haber akisi olumlu (pozitif 0.46 / negatif 0.21, 194 haber).
+
+> ⛔ **Risk kapisi durdurdu:** Safe Mode aktif — gunluk kayip limiti asilmisti, yeni islem yok.
+
+### ⛔ 2026-09-12T19:20:34 — OKB-USDT — RISK KAPISI ENGELLEDI
+
+- **teknik** (⏸️): RSI 39.3 notr bolgede, fiyat EMA20'in altinda.
+- **akilli_para** (🟢): Basarili traderlarin %100'i alis yonunde (6 alici / 0 satici).
+- **duygu** (🟢): Haber akisi olumlu (pozitif 0.50 / negatif 0.00, 10 haber).
+
+> ⛔ **Risk kapisi durdurdu:** OKB-USDT: bu paritede borsa koruma emri olusturmuyor, stop-loss'suz islem yapilmaz. Oturum boyunca kapali.
+
+### ⛔ 2026-09-12T19:20:35 — ORDI-USDT — RISK KAPISI ENGELLEDI
+
+- **teknik** (❓): Gosterge verisi bos dondu.
+- **akilli_para** (🟢): Basarili traderlarin %100'i alis yonunde (4 alici / 0 satici).
+- **duygu** (🟢): Haber akisi olumlu (pozitif 1.00 / negatif 0.00, 1 haber).
+
+> ⛔ **Risk kapisi durdurdu:** ORDI-USDT: bu paritede borsa koruma emri olusturmuyor, stop-loss'suz islem yapilmaz. Oturum boyunca kapali.
+
+### ⏸️ 2026-09-12T19:23:39 — BTC-USDT — BEKLEDI
+
+- **teknik** (🔴): RSI 76.2 (asiri alim) ve fiyat EMA20 altinda.
+- **akilli_para** (🟢): Basarili traderlarin %82'i alis yonunde (18 alici / 12 satici).
+- **duygu** (⏸️): Haber havasi notr (pozitif 0.36 / negatif 0.24, 1387 haber).
+
+### ⛔ 2026-09-12T19:23:42 — ETH-USDT — RISK KAPISI ENGELLEDI
+
+- **teknik** (⏸️): RSI 46.0 notr bolgede, fiyat EMA20'in altinda.
+- **akilli_para** (🟢): Basarili traderlarin %92'i alis yonunde (27 alici / 13 satici).
+- **duygu** (🟢): Haber akisi olumlu (pozitif 0.47 / negatif 0.12, 761 haber).
+
+> ⛔ **Risk kapisi durdurdu:** Safe Mode aktif — gunluk kayip limiti asilmisti, yeni islem yok.
+
+### ⛔ 2026-09-12T19:23:45 — SOL-USDT — RISK KAPISI ENGELLEDI
+
+- **teknik** (⏸️): RSI 50.1 notr bolgede, fiyat EMA20'in altinda.
+- **akilli_para** (🟢): Basarili traderlarin %91'i alis yonunde (10 alici / 2 satici).
+- **duygu** (🟢): Haber akisi olumlu (pozitif 0.57 / negatif 0.09, 878 haber).
+
+> ⛔ **Risk kapisi durdurdu:** Safe Mode aktif — gunluk kayip limiti asilmisti, yeni islem yok.
+
+### ⛔ 2026-09-12T19:23:47 — XRP-USDT — RISK KAPISI ENGELLEDI
+
+- **teknik** (⏸️): RSI 51.9 notr bolgede, fiyat EMA20'in altinda.
+- **akilli_para** (🟢): Basarili traderlarin %100'i alis yonunde (6 alici / 2 satici).
+- **duygu** (🟢): Haber akisi olumlu (pozitif 0.56 / negatif 0.11, 81 haber).
+
+> ⛔ **Risk kapisi durdurdu:** Safe Mode aktif — gunluk kayip limiti asilmisti, yeni islem yok.
+
+### ⏸️ 2026-09-12T19:23:48 — DOGE-USDT — BEKLEDI
+
+- **teknik** (⏸️): RSI 52.3 notr bolgede, fiyat EMA20'in altinda.
+- **akilli_para** (🟢): Basarili traderlarin %98'i alis yonunde (8 alici / 2 satici).
+- **duygu** (🔴): Haber akisi olumsuz (negatif 0.45 / pozitif 0.32, 74 haber).
+
+### ⛔ 2026-09-12T19:23:51 — ZEC-USDT — RISK KAPISI ENGELLEDI
+
+- **teknik** (🟢): RSI 0.0 (asiri satim) ve fiyat EMA20 uzerinde.
+- **akilli_para** (⏸️): Basarili traderlar bolunmus durumda (%42 alis). Net yon yok.
+- **duygu** (🟢): Haber akisi olumlu (pozitif 0.46 / negatif 0.21, 194 haber).
+
+> ⛔ **Risk kapisi durdurdu:** Safe Mode aktif — gunluk kayip limiti asilmisti, yeni islem yok.
+
+### ⛔ 2026-09-12T19:23:52 — OKB-USDT — RISK KAPISI ENGELLEDI
+
+- **teknik** (⏸️): RSI 34.0 notr bolgede, fiyat EMA20'in altinda.
+- **akilli_para** (🟢): Basarili traderlarin %100'i alis yonunde (6 alici / 0 satici).
+- **duygu** (🟢): Haber akisi olumlu (pozitif 0.50 / negatif 0.00, 10 haber).
+
+> ⛔ **Risk kapisi durdurdu:** OKB-USDT: bu paritede borsa koruma emri olusturmuyor, stop-loss'suz islem yapilmaz. Oturum boyunca kapali.
+
+### ⛔ 2026-09-12T19:23:53 — ORDI-USDT — RISK KAPISI ENGELLEDI
+
+- **teknik** (❓): Gosterge verisi bos dondu.
+- **akilli_para** (🟢): Basarili traderlarin %100'i alis yonunde (4 alici / 0 satici).
+- **duygu** (🟢): Haber akisi olumlu (pozitif 1.00 / negatif 0.00, 1 haber).
+
+> ⛔ **Risk kapisi durdurdu:** ORDI-USDT: bu paritede borsa koruma emri olusturmuyor, stop-loss'suz islem yapilmaz. Oturum boyunca kapali.
+

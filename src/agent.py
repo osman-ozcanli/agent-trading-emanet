@@ -17,6 +17,7 @@ from typing import Any
 
 import journal
 import mcp
+import metrics
 import risk
 import state
 import witnesses as W
@@ -409,6 +410,12 @@ def tick(cfg: dict[str, Any]) -> None:
         agree = sum(1 for v in verdicts if v.direction == action)
         print(f"  {inst_id:10} -> {action:5} ({agree}/3 tanik)")
         act(cfg, inst_id, action, verdicts, snapshot)
+
+    # The report is part of the audit trail, so the agent writes it itself.
+    try:
+        metrics.build()
+    except OSError as exc:
+        print(f"  !! METRICS.md yazilamadi: {exc}")
 
 
 def main() -> None:

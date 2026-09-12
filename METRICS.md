@@ -1,6 +1,6 @@
 # EMANET — performans metrikleri
 
-Üretildi: 12.09.2026 19:05 · `python src/metrics.py` · tablolar defterden üretilir.
+Üretildi: 12.09.2026 19:23 · ajan her turun sonunda kendisi yeniler (`src/metrics.py`) · tablolar defterden üretilir.
 
 > Hesap getirisi bu yarışmada puanlanmıyor ve burada iddia edilmiyor. Ölçülen şey ajanın
 > **karar kalitesi ve hesap verebilirliği**: kaç fırsat gördü, kaçını hangi kuralla reddetti,
@@ -8,25 +8,25 @@
 
 ## Canlı hesap — OKX TR sub-account, 30 USDT (18:29 iki gözetimli tur, 19:00'dan itibaren otonom)
 
-Kayıt aralığı **18:29:06 – 19:04:30** (35 dk) · kaynak `journal`
+Kayıt aralığı **18:29:06 – 19:23:16** (54 dk) · kaynak `journal`
 
 | Metrik | Değer |
 |---|---|
-| Karar | **36** |
-| Fırsat (al/sat sinyali üretilen) | 20 |
-| Gönderilen emir | **8** — 19.20 USDT |
-| Risk kapısı reddi | **12** (fırsatların %60'i) |
-| Ajanın kendi kapattığı pozisyon | 4 |
-| Bekleme kararı | 12 |
+| Karar | **84** |
+| Fırsat (al/sat sinyali üretilen) | 45 |
+| Gönderilen emir | **16** — 38.40 USDT |
+| Risk kapısı reddi | **29** (fırsatların %64'i) |
+| Ajanın kendi kapattığı pozisyon | 12 |
+| Bekleme kararı | 27 |
 | Ulaşılamayan tanık okuması | 0 |
 
 ### Hangi kural kaç kez devreye girdi
 
 | Kural | Kez |
 |---|---|
-| Ayni paritede zaten acik pozisyon var | 8 |
-| Acik pozisyon limiti dolu | 4 |
-| Zaman stopu — ajan pozisyonu kendisi kapatti | 4 |
+| Ayni paritede zaten acik pozisyon var | 20 |
+| Zaman stopu — ajan pozisyonu kendisi kapatti | 12 |
+| Acik pozisyon limiti dolu | 9 |
 
 ### Emirler
 
@@ -40,32 +40,40 @@ Kayıt aralığı **18:29:06 – 19:04:30** (35 dk) · kaynak `journal`
 | 19:01:05 | SOL-USDT | 2.4 | 102.88656 | 101.55965 |
 | 19:01:09 | XRP-USDT | 2.4 | 1.383682 | 1.365837 |
 | 19:01:15 | OKB-USDT | 2.4 | 114.99264 | 113.5096 |
+| 19:09:41 | ETH-USDT | 2.4 | 2553.90912 | 2520.9718 |
+| 19:09:45 | SOL-USDT | 2.4 | 102.83616 | 101.5099 |
+| 19:09:49 | XRP-USDT | 2.4 | 1.382371 | 1.364543 |
+| 19:09:56 | OKB-USDT | 2.4 | 114.7104 | 113.231 |
+| 19:19:43 | ETH-USDT | 2.4 | 2554.70544 | 2521.75785 |
+| 19:19:47 | SOL-USDT | 2.4 | 102.82608 | 101.49995 |
+| 19:19:51 | XRP-USDT | 2.4 | 1.38217 | 1.364344 |
+| 19:19:57 | OKB-USDT | 2.4 | 114.62976 | 113.1514 |
 
 _Elle yazılmış tek not (18:30, borsadan `spot_get_algo_orders` / `account_get_balance` ile):_ 4 OCO `live`, 4 gerçekleşme, USDT 30,00 → 20,40. 19:00'da zaman stopu dördünü kapattı (`spot_get_fills`: 4 satış).
 
 ## Demo hesap — karantina sonrası temiz defter
 
-Kayıt aralığı **17:29:46 – 19:04:17** (95 dk) · kaynak `journal`
+Kayıt aralığı **17:29:46 – 19:20:35** (111 dk) · kaynak `journal`
 
 | Metrik | Değer |
 |---|---|
-| Karar | **271** |
-| Fırsat (al/sat sinyali üretilen) | 150 |
+| Karar | **311** |
+| Fırsat (al/sat sinyali üretilen) | 180 |
 | Gönderilen emir | **20** — 49.36 USDT |
-| Risk kapısı reddi | **130** (fırsatların %87'i) |
+| Risk kapısı reddi | **160** (fırsatların %89'i) |
 | Ajanın kendi kapattığı pozisyon | 23 |
-| Bekleme kararı | 98 |
-| Ulaşılamayan tanık okuması | 155 |
+| Bekleme kararı | 108 |
+| Ulaşılamayan tanık okuması | 160 |
 
 ### Hangi kural kaç kez devreye girdi
 
 | Kural | Kez |
 |---|---|
-| Borsa koruma emri olusturmuyor — pozisyon geri alindi, parite kapali | 49 |
+| Borsa koruma emri olusturmuyor — pozisyon geri alindi, parite kapali | 59 |
 | Ayni paritede zaten acik pozisyon var | 46 |
+| Safe Mode aktif | 32 |
 | Borsanin minimum emir tutarinin altinda | 23 |
 | Zaman stopu — ajan pozisyonu kendisi kapatti | 23 |
-| Safe Mode aktif | 12 |
 
 ### Emirler
 

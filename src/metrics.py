@@ -84,14 +84,14 @@ def summarize(rows: list[dict[str, Any]], title: str) -> str:
     return "\n".join(out) + "\n"
 
 
-def main() -> None:
-    """Write METRICS.md."""
+def build() -> str:
+    """Render METRICS.md from both journals and write it. Returns the body."""
     demo = load(ROOT / "logs" / "journal.jsonl")
     live = load(ROOT / "logs" / "journal.live.jsonl")
     body = "\n".join([
         "# EMANET — performans metrikleri",
         "",
-        f"Üretildi: {datetime.now().strftime('%d.%m.%Y %H:%M')} · `python src/metrics.py` · tablolar defterden üretilir.",
+        f"Üretildi: {datetime.now().strftime('%d.%m.%Y %H:%M')} · ajan her turun sonunda kendisi yeniler (`src/metrics.py`) · tablolar defterden üretilir.",
         "",
         "> Hesap getirisi bu yarışmada puanlanmıyor ve burada iddia edilmiyor. Ölçülen şey ajanın",
         "> **karar kalitesi ve hesap verebilirliği**: kaç fırsat gördü, kaçını hangi kuralla reddetti,",
@@ -104,9 +104,14 @@ def main() -> None:
         summarize(demo, "Demo hesap — karantina sonrası temiz defter"),
     ])
     (ROOT / "METRICS.md").write_text(body, encoding="utf-8")
+    return body
+
+
+def main() -> None:
+    """CLI entry: build and print."""
     # Windows consoles default to cp1252; the file itself is always UTF-8.
     sys.stdout.reconfigure(encoding="utf-8", errors="replace")
-    print(body)
+    print(build())
 
 
 if __name__ == "__main__":
