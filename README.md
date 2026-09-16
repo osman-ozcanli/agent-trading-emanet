@@ -84,20 +84,31 @@ Risk kuralları ve tanık eşiklerinin çoğu config'te; akıllı para eşiği (
 ```bash
 npm i -g @okx_ai/okx-trade-cli @okx_ai/okx-trade-mcp   # ATK CLI + MCP sunucusu
 npx skills add okx/agent-skills                           # 10 OKX skill (.agents/skills/)
-okx config init                                           # site: TR · demo: Y · API key
-pip install pyyaml
-python src/agent.py --once                        # tek tur, demo
-python src/agent.py                               # otonom dongu, demo (config.yaml)
-python src/agent.py --config config.live.yaml     # otonom dongu, canli (ayri defter + ayri state dosyasi)
-python src/dashboard.py                           # http://localhost:8787 (config.yaml'daki defteri gosterir)
+pip install -r requirements.txt                           # yalnizca pyyaml
+okx config init                                           # site: TR · iki profil olustur, adlari AYNEN:
+                                                          #   okx-demo  (demo: Y)  -> demo emirleri
+                                                          #   okx-prod  (demo: N)  -> canli emirler + akilli para + haber
 ```
 
+Profil adları `config*.yaml` içinde sabit; farklı ad verirsen ajan ilk turda "MCP handshake failed" der.
+Akıllı para ve haber tanıkları demo modda bile `okx-prod` ister; OKX bu verileri demo key'e vermiyor.
+
+**Sırayla, atlamadan:**
+
+```bash
+python src/agent.py --once --config config.demo.yaml   # 1) demo hesap, tek tur: kurulum calisiyor mu?
+python src/agent.py --config config.demo.yaml          # 2) demo dongu: bir saat izle, defteri oku
+python src/agent.py --once                             # 3) CANLI, tek tur, gozetimli (config.yaml)
+python src/agent.py                                    # 4) CANLI otonom dongu
+python src/dashboard.py                                # http://localhost:8787, config.yaml'daki defter
+```
+
+`config.yaml` **canlı** hesaptır, gerçek para gönderir. Emir göndermeden denemek için içinde `dry_run: true` yap.
 Kimlik bilgileri `~/.okx/config.toml`'da, proje dışında. Bu repoda **hiçbir key yok.**
-`dry_run: true` ile emir gönderilmeden çalıştırılabilir.
 
 ## 5. Kanıt
 
-- **Demo:** `logs/journal.jsonl` — 17:29'dan itibaren; 17:36 öncesi 16 kayıt yalnızca bekleme/red
+- **Demo (12.09, kapandı):** `logs/journal.jsonl` — 17:29'dan itibaren; 17:36 öncesi 16 kayıt yalnızca bekleme/red
   (karantina sonrası, emir yok). Öncesi `logs/archive/`, bkz. §7.
 - **Canlı:** `logs/journal.live.jsonl` — 18:29–18:30 iki gözetimli tur (4 emir, 5 red), 19:00'dan itibaren
   kesintisiz otonom. 19:00'da zaman stopu 4 pozisyonu kapattı; borsada 4 satış fill'i `agentx…` id'leriyle duruyor.
@@ -125,8 +136,9 @@ Ayrıca `.agents/skills/` altında 10 OKX skill'i Claude Code'a yüklü; `skills
   7 günlük akıllı para ile haber duygusu oldu. İkisi de saatler boyunca neredeyse sabit. Yani 8 dakikalık
   pozisyonlar günlük ölçekli sinyalle açılıp zaman stopuyla kapanıyor; bu bir çalkalama riskidir, karar kalitesi
   değil. Teknik tanığın tek ve konsensüs mimarisinin gerçek katkısı bugünkü veriyle kanıtlanmış değil.
-- **Kâr-al/zarar-kes'in fiyatla tetiklenmesi bugün gözlemlenmedi.** Emirler borsada `live` duruyor;
-  test penceresinde fiyat bantlara girmedi. Pozisyonları kapatan her seferinde zaman stopu oldu (sayı `METRICS.md`).
+- **Kâr-al hiç tetiklenmedi; zarar-kes 4 kez tetiklendi, hepsi ajan kapalıyken.** 12.09 19:58'de süreçler
+  durduruldu, OCO'lar borsada bırakıldı; XRP 21:19, SOL 22:22, ETH 22:33'te (TR) borsa stopları kendisi çalıştırdı.
+  "Risk borsada" iddiasının ilk gerçek sınavı buydu. Günün toplam maliyeti 0,19 USDT (komisyon + 4 stop).
 - **Günlük kayıp kuralı gerçek kayıpla hiç tetiklenmedi.** Demo'da yapısal olarak tetiklenemez: sermaye tavanı
   yüzünden ölçülen özkaynak hep 30'a eşit. Defterdeki "Safe Mode" kayıtları 6 numaralı hatadan. Gerçekleşmemiş
   zarar da sayılmıyor; kural yalnızca kapanan pozisyonların kaybını görür.
@@ -171,5 +183,6 @@ src/state.py       kalici durum         src/journal.py    iki defter (jsonl + md
 src/dashboard.py   arayuz               src/metrics.py    METRICS.md uretici
 src/okx.py         config yukleyici     src/llm.py        terk edilen LLM katmani (kapali)
                    (+ kullanilmayan CLI sarmalayici)
-config.yaml        tum ayarlar          logs/             defterler, durum, karantina
+config.yaml        canli ayarlar        logs/             defterler, durum, karantina
+config.demo.yaml   demo (pasif)
 ```

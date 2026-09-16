@@ -1,6 +1,11 @@
 # PROGRESS — Agentic Trading Hackathon (12.09.2026)
 
-## ŞU ANKİ DURUM (18:12)
+## ŞU ANKİ DURUM (13.09 11:10)
+Sunum yapıldı. Süreçler 12.09 19:58'de durduruldu; gece OCO stopları borsada kendisi çalıştı (XRP/SOL/ETH), kayıp 0,19 USDT.
+**Demo kapandı:** `config.yaml` artık canlı, demo `config.demo.yaml` (pasif). Panel ve ajan varsayılan canlı okur.
+Şu an çalışan süreç yok, borsada bekleyen emir yok, USDT 29,81.
+
+## ŞU ANKİ DURUM (12.09 18:12, tarihçe)
 **Adım 1-6 ✅ · 8 ✅ · 9 ✅ · 10 kısmi ✅ · Adım 7 (LLM) ⛔ terk edildi**
 
 Agent arka planda çalışıyor — 3 dakikada bir tur, baştan sona MCP üzerinden, demo hesaba

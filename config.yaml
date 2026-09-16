@@ -1,7 +1,9 @@
+# CANLI config — varsayilan. `python src/agent.py` ve `python src/dashboard.py` bunu okur.
+# Demo ara basamakti (12.09); artik hicbir surec ona bakmaz. Dosyasi: config.demo.yaml
 # Single source of truth for runtime behaviour. No hardcoded values in code.
 
 capital:
-  mode: demo              # demo | live
+  mode: live              # CANLI — 18:30, gozetimli tek tur
   # Demo account holds 5000 USDT of fake money; live holds ~30 USDT.
   # Cap it so demo behaviour matches live conditions exactly.
   virtual_cap_usdt: 30
@@ -45,7 +47,7 @@ profiles:
   # Intelligence comes from the LIVE market (read-only key); execution stays sandboxed.
   #   okx-demo : demo key, trade permission -> orders + portfolio
   #   okx-prod : live key, READ-ONLY        -> smartmoney + news (both blocked in demo mode)
-  trading: okx-demo
+  trading: okx-prod       # CANLI islem key'i (sub-account, 30 USDT)
   intel: okx-prod       # read-only, cannot place orders — verified 14:25
 
 witnesses:
@@ -88,6 +90,6 @@ llm:
 
 logging:
   dir: logs
-  state: logs/state.json
-  journal: logs/journal.jsonl        # makine okur / machine-readable
-  decisions: logs/decisions.md       # insan okur / human-readable, UX katmani
+  state: logs/state.live.json
+  journal: logs/journal.live.jsonl   # CANLI defteri — demo'dan ayri
+  decisions: logs/decisions.live.md
