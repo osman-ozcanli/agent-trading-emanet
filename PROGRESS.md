@@ -1,6 +1,83 @@
 # PROGRESS — Agentic Trading Hackathon (12.09.2026)
 
-## ŞU ANKİ DURUM (13.09 11:10)
+## ŞU ANKİ DURUM (18.09, hedef değişti: hackathon bitti, sıradaki amaç para kazanma)
+
+Yarışma teslimi 12.09'da tamamlandı (bkz. altındaki tarihçe). 13.09 sabahından bugüne kod
+**dondu** — hiçbir dosya değişmedi, sadece karar aşamasındayız. Şu an sistem tamamen kapalı:
+süreç yok, borsada bekleyen emir yok. Bu bölüm 13.09–18.09 arası konuşulan ve KARARA
+BAĞLANMAMIŞ her şeyi topluyor; kod tarafında hiçbiri henüz uygulanmadı.
+
+**Yeni hedef (Osman, 16.09):** artık yarışma amaçlı "hesap veren ajan" değil, gerçek para
+kazanma amaçlı otonom sistem. Mimari (risk kapısı, borsa tarafı stop, defter, ağ kesintisi
+davranışı) olduğu gibi kalacak — bunlar zaten sağlam. Değişecek olan tek şey **karar mantığı**
+(`witnesses.py` + `config.yaml` eşikleri), döngü değil.
+
+### Bekleyen karar 1 — Backtest (`src/backtest.py`, henüz yazılmadı)
+Ajana dokunmadan ayrı dosya. Kapsam: 8 parite × 90 gün 15dk mum + günlük akıllı para serisi
+(ikisi de MCP'de mevcut, sınandı — `market_get_candles` 2021'e kadar gidiyor,
+`smartmoney_get_signal_trend_by_filter` 90 gün günlük kova veriyor). Haber tanığı için geçmiş
+oran yok, iki senaryo denenecek: yok say / makale sayısından yaklaşık oran. Mevcut kural aynen
+uygulanacak (2/3 onay, sıfır karşı oy, +%0,8/−%0,5, 8dk zaman stopu, %0,1 komisyon her yön).
+Çıktı: işlem sayısı, net getiri, kazanma oranı, eşik taraması (akıllı para 0,60→0,90,
+RSI 35/65→25/75). Tahmini süre 2 saat. **Beklenti: mevcut eşiklerle negatif/sıfıra yakın** —
+90 günlük akıllı para verisi ETH için incelendi, `weightedLongRatio` neredeyse hep 0,60 üstü
+çıktı; yani ≥0,60 eşiği bu tanığı fiilen "hep al" yapıyor, gerçek ayrım gücü yok. Bu backtest
+için hâlâ Osman'ın "hadi" demesi gerekiyor.
+
+### Bekleyen karar 2 — Yol haritası (para kazanma), 6 adım, sıralı
+1. Backtest (yukarıda) — kural değişmeden mevcut sinyallerin gerçekten bir kenarı var mı ölç.
+2. Strateji revizyonu — tanıkların zaman ölçeğini eşitle (şu an teknik 15dk, akıllı para günlük,
+   uyumsuz), eşikleri backtest'le tara, pozisyon boyutunu riske göre hesapla (şu an sabit %10,
+   olması gereken: stop mesafesine göre değişken boyut, işlem başı risk sermayenin ~%1'i).
+   Geçiş şartı: backtest'te komisyon sonrası pozitif VE maks. düşüş <%10.
+3. Demo'da 2 hafta ileriye dönük test, dokunmadan izle.
+4. 7/24 altyapı (aşağıda, ayrı karar).
+5. LLM katmanı canlandırılır — SADECE üç rolde, emir kararında ASLA (aşağıda detay).
+6. Küçük canlı (100–200 USDT), adım 3'teki kurallarla; aylık sonuç tutarlıysa sermaye artar.
+
+### Bekleyen karar 3 — LLM'in yeri (`llm.py` şu an `enabled: false`, hiç çağrılmıyor)
+Emir kararında LLM YOK ve olmayacak — 7/24 gerçek para gönderen yerde halüsinasyon kabul
+edilemez. Üç meşru rol, hiçbiri emir veremez:
+- **4. tanık**: haber/makro takvimi okuyup oy verir, veto edebilir (örn. "bugün FOMC var, bekle").
+- **Rejim tespiti**: günde bir kez piyasayı sınıflandırır (trend/yatay/panik), config'teki HAZIR
+  parametre setlerinden birini seçer — sayı uydurmaz, seçenek listesinden seçer.
+- **Açıklama ve alarm**: deftere Türkçe özet, Telegram'a gün sonu raporu, anormallik uyarısı.
+  (`.env.example`'da `TELEGRAM_BOT_TOKEN` yeri zaten var, kullanılmadı.)
+
+### Bekleyen karar 4 — 7/24 altyapı: sunucu ŞİMDİ gerekli değil
+Osman'ın kararı (16.09): ücretli sunucu şu an istemiyor. Ara çözüm — kod değişikliği
+GEREKMİYOR, çünkü ajan zaten "kaldığı yerden devam edecek" şekilde yazılı (state dosyadan
+okunuyor, açılışta borsayla mutabakat ediliyor, zaman stopu gerçek saate göre çalışıyor —
+dün gece bunu kanıtladık, ajan kapalıyken 3 pozisyon borsanın kendi OCO'suyla kapandı).
+Eksik olan TEK şey: laptop açılınca ajanın OTOMATİK başlaması. Çözüm: Windows Görev
+Zamanlayıcısı'na "oturum açılınca `python src/agent.py` çalıştır" kaydı — bedava, ~10 dk,
+kod değişikliği yok. **Henüz kurulmadı, Osman onay verirse kurulacak.**
+Gerçek dezavantajı tespit edildi: 8dk'lık zaman stopu gerçek saate göre çalıştığı için laptop
+kapalıyken açık kalan pozisyon yalnızca borsanın geniş bandıyla (%0,8/−%0,5) korunur, tasarlanan
+hızlı devir bozulur — güvenlik sorunu değil, strateji sapması (en kötü senaryo: 4 pozisyon ×
+%0,5 ≈ sermayenin %2'si).
+İleride sunucu gerekirse tek gerçek "süresiz bedava" seçenek: **Oracle Cloud Always Free**
+(AWS/GCP'nin ücretsiz katmanı 12 ay sonra ücretli olur, bu değil; Railway/Render sürekli
+arka plan sürecini bedava katmanda uyutur, bize uymaz).
+
+### Diğer küçük notlar (13–16.09)
+- README ve METRICS.md düzeltmeleri yapıldı: yanlış iddialar ("unknown veto eder", "CLI yedek
+  yolu", "elle sayı yok") kaldırıldı, gerçek davranışla değiştirildi (bkz. git log, commit'ler
+  `5f97cfc`, `c699299`).
+- `config.yaml` artık CANLI (eski `config.live.yaml`), demo `config.demo.yaml` oldu ve pasif.
+  `agent.py --config <dosya>` bayrağı eklendi.
+- Kapatma miktarı borsadan okunuyor (Hata 7), ayrı state dosyaları (Hata 8), teknik tanık
+  bozuk veriyi (RSI 0, EMA fiyattan kopuk) artık "unknown" sayıyor (Hata 9) — hepsi kod'da,
+  commit `5f97cfc`.
+- Sunum Gamma ile hazırlandı, PPTX/PDF dışa aktarıldı, `src/sunum_guncelle.py` ile sayı
+  otomatik tazeleniyor (ajanın turuna bağlandı, sonra "artık çalışmasın" denince ajanla
+  birlikte durdu).
+- `~/.okx/`, `~/.claude.json`, npm global paketler taranıp proje dışı hiçbir sızıntı
+  bulunmadı; iki gereksiz `.bak` dosyası tespit edildi (silinmesi Osman'a bırakıldı).
+- Görsel açıklayıcı artifact yayınlandı: "Bağlanmanın Anatomisi"
+  (repo/paket/API/MCP/skill mekaniği), https://claude.ai/artifact/Agomg8HrjeQoDn9YgY51X6
+
+## ŞU ANKİ DURUM (13.09 11:10, tarihçe)
 Sunum yapıldı. Süreçler 12.09 19:58'de durduruldu; gece OCO stopları borsada kendisi çalıştı (XRP/SOL/ETH), kayıp 0,19 USDT.
 **Demo kapandı:** `config.yaml` artık canlı, demo `config.demo.yaml` (pasif). Panel ve ajan varsayılan canlı okur.
 Şu an çalışan süreç yok, borsada bekleyen emir yok, USDT 29,81.
