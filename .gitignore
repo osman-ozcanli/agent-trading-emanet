@@ -6,6 +6,9 @@ config.local.*
 # Journals ARE the evidence and are committed on purpose (logs/journal*.jsonl,
 # decisions*.md, state*.json, archive/). Only the raw console stream is excluded.
 logs/agent.out
+# Backtest ham mum onbellegi (1,9 MB): kanit degil tureyen veri, `--refresh` ile
+# yeniden uretilir. Rapor (logs/BACKTEST.md) kanittir ve commit edilir.
+logs/backtest_cache.json
 
 # Runtime
 node_modules/

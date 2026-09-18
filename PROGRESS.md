@@ -24,6 +24,180 @@ RSI 35/65→25/75). Tahmini süre 2 saat. **Beklenti: mevcut eşiklerle negatif/
 çıktı; yani ≥0,60 eşiği bu tanığı fiilen "hep al" yapıyor, gerçek ayrım gücü yok. Bu backtest
 için hâlâ Osman'ın "hadi" demesi gerekiyor.
 
+### 18.09 — Backtest yapıldı, Adım 1 TAMAM, Adım 2 kararı verildi
+
+**Backtest sonucu (`src/backtest.py` → `logs/BACKTEST.md`):** 8 parite, 299 saat (1H mum), 2.240
+değerlendirme, **0 işlem**. Sebep eşik değil, mantık hatası: teknik tanık "RSI<35 VE fiyat>EMA20"
+istiyor; bu iki koşul 2.240 barda **sıfır kez** aynı anda oluştu (RSI<35 tek başına 233 kez,
+fiyat>EMA 1.048 kez). RSI düşükken fiyat zaten EMA altında; kural iki zıt rejimi aynı anda istiyor.
+Sat tarafı da aynı, sıfır. 12.09'daki "teknik tanık hiçbir alıma katılmadı" gözlemi böylece
+sayısal olarak doğrulandı. Kapsam 90 gün değil 12,5 gün: OKX'in günlük akıllı para uç noktası
+bugün HTTP 500, saatlik olan 100 kayıt üstünü reddediyor (bizim hata değil). Duygu tanığı geçmiş
+verisi olmadığı için "unknown" sayıldı, uydurma oran yapılmadı.
+
+**KARAR (Osman, 18.09): Seçenek C — teknik tanık "rejim anahtarı" olur.**
+- 1 saatlik EMA20 ve 4 saatlik EMA20'nin **ikisi de** fiyatın altındaysa → `buy`
+- ikisi de üstündeyse → `sell` (yani düşüş rejiminde akıllı para ne derse desin alım VETO)
+- karışıksa → `wait`. RSI tamamen devreden çıkar.
+- Gerekçe: mevcut kuralın "tek karşı oy işlemi öldürür" maddesine gerçek bir diş takar; akıllı
+  para ile aynı ufukta (saatlik/günlük) konuşur; ateşlenme oranı beklenen %10–40 bandında.
+- Reddedilen alternatifler: (A) sadece 1H EMA — daha gürültülü; (B) sadece RSI ortalamaya
+  dönüş — akıllı parayla zıt ufuk; "teknik tanığı kaldır" — tek tanıklı sistem olur, fren kalmaz.
+
+**Uygulama sırası (Sonnet ile devam edilebilir, spesifikasyon tam):**
+1. `src/backtest.py`: (a) 4H mum çekimi ekle (`bar="4H"`, aynı `fetch_candles`), (b)
+   `witness_technical_regime(px, ema1h, ema4h)` fonksiyonu, (c) `--variant {mevcut,C}` bayrağı
+   ile ikisini yan yana koştur, (d) rapora her tanık için **ateşlenme oranı** (buy+sell)/toplam
+   ekle. Hedef bant %10–40; %1 altı dekoratif, %60 üstü gürültü.
+2. Backtest'te C'nin işlem sayısı, getiri, kazanma oranı, ateşlenme oranı görülür. **Osman
+   sayıyı görüp onaylamadan canlı ajana dokunulmaz.**
+3. Onay sonrası: `src/witnesses.py` `technical()` fonksiyonu C mantığıyla değiştirilir,
+   `config.yaml` `technical` bloğu (`timeframe: 1H`, `confirm_timeframe: 4H`, `ema_period: 20`,
+   RSI satırları kaldırılır). `agent.py`, `risk.py`, defter, OCO mantığına dokunulmaz.
+4. Değişiklik sonrası demo'da (`--config config.demo.yaml`) en az 1 gün ileriye dönük izleme,
+   sonra canlı.
+
+### 18.09 (devam) — Seçenek C uygulandı ve test edildi, SONUÇ: canlıya geçilmiyor
+
+`src/backtest.py` içine `witness_technical_regime()` (1H+4H EMA20 rejim anahtarı) ve
+`--variant {mevcut,C,both}` eklendi, 4H mum çekimi eklendi, her tanık için **ateşlenme oranı**
+(buy+sell / toplam) rapora eklendi. `python src/backtest.py --variant both` ile ikisi yan yana
+koşuldu, sonuç `logs/BACKTEST.md`'de.
+
+**Sonuç, aynı 299 saatlik pencerede:**
+
+| Varyant | Teknik ateşlenme | İşlem | Net getiri | Kazanma |
+|---|---|---|---|---|
+| mevcut (RSI+EMA1H) | %0,0 | 0 | %+0,00 | — |
+| C (EMA1H+EMA4H rejim) | **%77,0** | 198 | **%-2,27** | %34,3 |
+
+**Karar öncesi belirlenen ölçü** (bu sohbette, sonucu görmeden önce): ateşlenme %10–40 hedef bant,
+%1 altı dekoratif, %60 üstü gürültü. C, %77 ile kendi koyduğumuz gürültü eşiğinin üstünde çıktı.
+Sebep muhtemelen 1 saatlik ve 4 saatlik EMA'nın birbirine çok yakın zaman ölçeklerinde olması —
+neredeyse hep aynı yönü gösteriyorlar, yani "iki zaman dilimi anlaşırsa" şartı neredeyse hiç
+"karışık" (wait) çıkmıyor. Kazanma oranı da %34,3 ile zayıf, net getiri negatif.
+
+**KARAR: C bu haliyle canlıya alınmıyor.** Ön kabul edilen ölçüye göre kendimiz durduk —
+"sayıyı görmeden onaylamayız" kuralı tam olarak bunun için vardı. Ajan ve config dokunulmadı,
+dondurulmuş halde kalıyor.
+
+**Sıradaki deneme (henüz yapılmadı, karar bekliyor):** zaman dilimlerini birbirinden uzaklaştırmak
+— örn. 1 saatlik yerine 15 dakikalık + 4 saatlik yerine 1 günlük EMA, ya da rejim şartına bir
+"tampon" eklemek (fiyat EMA'dan en az %X uzaktaysa say, yakınken "karışık" say). İkisi de
+`witness_technical_regime()`'e küçük bir parametre eklemekle test edilebilir, `src/backtest.py`
+zaten hazır. Osman'ın hangi yönü denemek istediğine karar vermesi gerekiyor.
+
+Kod durumu: `src/backtest.py` güncellendi (varyant desteği + ateşlenme oranı), git'e eklenmedi.
+Ajan ve `witnesses.py`/`config.yaml` hâlâ dondurulmuş, hiçbir canlı davranış değişmedi.
+
+### 18.09 (devam) — Tampon denemesi: ateşlenme düzeldi, kenar hâlâ yok
+
+`witness_technical_regime()`'e `buffer_pct` eklendi (fiyat EMA'ya en az bu kadar uzaksa say,
+yakınken "karışık"). `--buffer-sweep` bayrağıyla 0,0 → 3,0 arası tarandı, veri önbellekte
+kaldığı için yeniden çekim yapılmadı.
+
+| Tampon | Ateşlenme | İşlem | Getiri | Kazanma |
+|---|---|---|---|---|
+| 0,0 | %77,0 | 198 | -2,25% | %34,3 |
+| 1,0 | %27,3 | 87 | -1,18% | %33,3 |
+| **2,0** | **%10,9 (hedef banda giren en dar nokta)** | 35 | -0,41% | %37,1 |
+| 3,0 | %5,3 (bant dışı, dekoratife dönüyor) | 14 | -0,25% | %28,6 |
+
+**Ateşlenme sorunu çözüldü:** tampon ~%2,0'da %10–40 hedef bandına tam oturuyor.
+**Kârlılık sorunu çözülmedi ve bu ayrı bir bulgu:** tampon arttıkça kayıp sürekli küçülüp
+sıfıra sürünüyor, hiçbir noktada pozitife dönmüyor. Gerçek bir kenar olsaydı getiri bir yerde
+tepe yapıp sonra düşerdi; burada "daha az işlem = daha az kayıp" görülüyor — bu, sinyalin var
+olduğunun değil, **sinyalin olmadığının** klasik izi (rastgele işlem yapmamanın maliyeti sıfıra
+yakınsıyor).
+
+**KARAR: Seçenek C + tampon, mimari olarak sağlıklı (ateşlenme doğru) ama şu iki tanıkla
+(teknik + akıllı para) kârlı bir kenar YOK.** Bu, backtest'in amacına tam ulaştığı an: sahte
+bir "çalışıyor" hissi yerine net bir "henüz kenar yok" cevabı. Osman'ın önünde üç seçenek var,
+hiçbiri şu an uygulanmadı:
+1. Üçüncü/dördüncü bir tanık ekle (haber/LLM, rejim tespiti — Adım 5'te zaten planlıydı) —
+   belki iki tanığın kesişimi yetersiz, üçüncü bağımsız kaynak ayırt edici olabilir.
+2. Farklı bir parite evreni ya da zaman dilimi dene (şu an 8 parite, 1H/4H sabit).
+3. Kabul et: bu iki tanıkla "kenar yok" bulgusu kendi başına değerli bir sonuç, sisteme
+   3. maddedeki LLM/haber tanığı eklenmeden canlıya geçilmemeli.
+
+Kod durumu: `src/backtest.py` içinde `buffer_sweep()` eklendi, git'e eklenmedi. Ajan ve
+`witnesses.py`/`config.yaml` hâlâ dondurulmuş.
+
+### 18.09 öğleden sonra — ADIM 1 KAPANDI: sorun tanık değil vade, ölçüldü
+
+Sabahki üç tur (mevcut / C / C+tampon) hep **tanık mantığını** değiştirdi ve hep negatif
+çıktı. İşlem bazlı ayrıştırma sebebin tanık olmadığını gösterdi: zaman-stopuyla kapanan 114
+işlemin komisyon öncesi kenarı **%+0,064**, gidiş-dönüş komisyon **%0,20** — sinyal yanlış
+değil, **3,1 kat zayıf**. Bu kapalı-form bir hesap olduğu için hangi tanık konursa konsun
+negatif kalıyordu. `src/backtest.py` bu yüzden vadeyi tarayacak şekilde yeniden kuruldu.
+
+**Ölçüm aparatında düzeltilen dört şey** (hepsi kanıt değeri olan sayıları etkiliyordu):
+1. **Short bantları tersti.** Kâr-al/zarar-kes iki yön için de alış mantığıyla
+   hesaplanıyordu; `sell take_profit -0.0240` satırları bunun iziydi. Artık seviyeler
+   `risk.brackets()`'ten — canlı ajanın *aynı* fonksiyonundan — geliyor.
+2. **Spot'ta short sayılıyordu.** Önceki 198 işlemin 34'ü short'tu, ajan bunları hiç
+   uygulayamazdı. Short varsayılan kapalı, ayrı red gerekçesi olarak kayda geçiyor.
+3. **Sessiz geriye dönük bakış.** OKX mumu **açılış** zamanıyla damgalıyor: 12:00 damgalı
+   4H barı 16:00'da kapanır, EMA'sı öncesinde bilinemez. Eski hizalama bunu gözetmiyordu,
+   rejim anahtarı 4 saate kadar gelecekten okuyabiliyordu. Artık `açılış + süre <= t`
+   şartı var, yarım kalan son mum da atılıyor.
+4. **Önbellek gerçekten yoktu.** "Veri önbellekte kaldı" notu yanlıştı; her koşu yeniden
+   çekiyordu, aynı satırın -1,18 / -1,20 çıkması bu yüzdendi. Artık
+   `logs/backtest_cache.json` var (gitignore'da: kanıt değil türeyen veri).
+
+Ayrıca pencere **12,5 → 99,9 güne** çıktı (`after` imleciyle sayfalama), rapora işlem başı
+**standart hata + t değeri** ve **al-tut ölçütü** eklendi. Akıllı para bu modda devre dışı:
+geçmişi hâlâ ~100 saat (günlük uç nokta HTTP 500, saatlik limit>100 reddediyor) ve veri
+varken oyların %75'i "buy" — neredeyse sabit, şart koşmak pencereyi 4 güne düşürüyordu.
+
+**Sonuçlar (99,9 gün, 8 parite, 1H sim + EMA20 4H/1G sinyal, %0,2 komisyon, short kapalı):**
+
+| Tutma | İşlem | Net getiri | Kazanma | Maks düşüş | Brüt/işlem | Net/işlem | t |
+|---|---|---|---|---|---|---|---|
+| 1 sa | 5.299 | %-66,24 | %26,9 | %66,35 | %-0,017 | %-0,217 | **-36,97** |
+| 4 sa | 1.711 | %-22,15 | %38,5 | %23,11 | %+0,005 | %-0,195 | -7,37 |
+| 8 sa | 949 | %-12,01 | %40,4 | %13,62 | %+0,007 | %-0,193 | -3,73 |
+| 1 gün | 438 | %-3,89 | %42,2 | %6,97 | %+0,052 | %-0,148 | -1,24 |
+| 2 gün | 230 | %-0,41 | %42,2 | %4,00 | %+0,147 | %-0,053 | -0,22 |
+| 4 gün | 127 | **%+1,22** | %46,5 | %4,01 | %+0,331 | %+0,131 | +0,29 |
+
+Teşhis amaçlı ters çevrilmiş (ortalamaya dönüş) hali her vadede daha iyi; en iyisi 4 gün
+tutmada %+4,89, maks düşüş %2,98, t=+1,82.
+
+**Dört okuma:**
+1. **Teşhis kanıtlandı.** 1 saatlik vadede brüt kenar sıfır, kayıp **tamamen** komisyon,
+   t = -36,97. Sabah üç kez tanık değiştirmenin neden sonuç vermediği kesinleşti.
+2. **Vade doğru değişkendi.** Brüt kenar altı vadede de **monotonik** artıyor, maks düşüş
+   %66 → %4. Monotonluk tek bir pozitif satırdan güçlü kanıt.
+3. **Ama kenar gösterilemedi.** En iyi satırda bile |t| < 2, ve 2 yön × 6 vade = **12
+   kombinasyon** denendi; en iyisinin t≈1,8 çıkması şansla beklenen şey.
+4. **Ölçüt hepsini geçti.** Aynı pencerede 8 pariteyi eşit ağırlıkla sadece tutmak
+   **%+60,80** (ZEC +%231, SOL +%62, ETH +%52). Ters çevrilmiş kuralın iyi görünmesinin en
+   olası açıklaması da bu: yükselen piyasada "düşüşte al" her zaman iyi görünür. Ortalamaya
+   dönüş kenarı değil, **uzun taraflı olmanın** getirisi.
+
+**KARAR: Adım 1'in sorusu cevaplandı — mevcut kurallarla kanıtlanmış kenar YOK.** Vade
+düzeltmesi gerekli bir adımdı ve yapıldı (%-66 → %+1, düşüş %66 → %4) ama yeterli değil.
+**Adım 2'nin geçiş şartı (komisyon sonrası pozitif VE maks. düşüş <%10) henüz SAĞLANMADI**;
+4 günlük satır sayısal olarak geçiyor ama istatistiksel olarak sıfırdan ayırt edilemiyor.
+
+**Adım 1'in tek açık ucu:** 99,9 günün tamamı boğa. Sinyalin ayı/yatay rejimde ne yaptığı
+bilinmiyor. `python src/backtest.py --days 400 --horizon-sweep` — tek komut, sayfalama
+hazır. Sinyal yalnızca boğada çalışıyorsa bu strateji değil **gizli bir al-tut pozisyonu**.
+
+**Adım 2 için `backtest.py`'de henüz OLMAYAN üç şey** (Adım 2 işidir, Adım 1 değil):
+- **Eşik taraması yok.** Eski `threshold_sweep()` yeniden kurulumda çıkarıldı; zaten
+  vakumdu (teknik tanık hiç ateşlenmediği için 16 satırın hepsi sıfırdı). Adım 2 "eşikleri
+  tara" dediği için yeniden, anlamlı şekilde yazılmalı.
+- **Riske göre boyutlama yok.** Şu an sabit %10. Adım 2'nin istediği: stop mesafesine göre
+  değişken boyut, işlem başı risk sermayenin ~%1'i.
+- **Akıllı para uzun pencerede test edilemiyor.** ~100 saat sınırı Adım 2'nin "tanıkların
+  zaman ölçeğini eşitle" maddesinin önündeki gerçek engel. Çözüm: saatlik sorguyu tarih
+  aralığı kaydırarak sayfalamak (mumda çalışan `after` deseninin aynısı).
+
+Kod durumu: `src/backtest.py` yeniden kuruldu, `logs/BACKTEST.md` yeni rapor, `.gitignore`'a
+önbellek satırı. **`config.yaml`, `src/witnesses.py` ve ajan dokunulmadı** — dondurulmuş.
+
 ### Bekleyen karar 2 — Yol haritası (para kazanma), 6 adım, sıralı
 1. Backtest (yukarıda) — kural değişmeden mevcut sinyallerin gerçekten bir kenarı var mı ölç.
 2. Strateji revizyonu — tanıkların zaman ölçeğini eşitle (şu an teknik 15dk, akıllı para günlük,
